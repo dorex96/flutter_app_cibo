@@ -2,5 +2,37 @@
     "containerListPageTitle": "Contenitori in Frigo",
     "@containerListPageTitle": {
         "description": "The title for the container list page"
+    },
+    "containerDetailNewTitle": "Nuovo Contenitore",
+    "@containerDetailNewTitle": {
+        "description": "The title for the new container detail page"
+    },
+    "conteinerDetailEditTitle": "Modifica Contenitore",
+    "@conteinerDetailEditTitle": {
+        "description": "The title for the edit container detail page"
+    },
+    "containerDetailNameLabel": "Nome Contenitore",
+    "@containerDetailNameLabel": {
+        "description": "Label for the container name field in the container detail page"
+    },
+    "containerDetailContainerWeightLabel": "Peso Contenitore (g)",
+    "@containerDetailContainerWeightLabel": {
+        "description": "Label for the container weight field in the container detail page"
+    },
+    "containerDetailFoodWeightLabel": "Peso Cibo (g)",
+    "@containerDetailFoodWeightLabel": {
+        "description": "Label for the food weight field in the container detail page"
+    },
+    "containerDetailPortionLabel": "Porzione",
+    "@containerDetailPortionLabel": {
+        "description": "Label for the portion field in the container detail page"
+    },
+    "containerDetailPortionWeightLabel": "Peso Porzione (g)",
+    "@containerDetailPortionWeightLabel": {
+        "description": "Label for the portion weight field in the container detail page"
+    },
+    "containerDetailSaveButton": "Salva Contenitore",
+    "@containerDetailSaveButton": {
+        "description": "Label for the save container button in the container detail page"
     }
 }

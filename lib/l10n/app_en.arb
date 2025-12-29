@@ -2,5 +2,37 @@
     "containerListPageTitle": "Containers in Fridge",
     "@containerListPageTitle": {
         "description": "The title for the container list page"
+    },
+    "containerDetailNewTitle": "New Container",
+    "@containerDetailNewTitle": {
+        "description": "The title for the new container detail page"
+    },
+    "conteinerDetailEditTitle": "Edit Container",
+    "@conteinerDetailEditTitle": {
+        "description": "The title for the edit container detail page"
+    },
+    "containerDetailNameLabel": "Container Name",
+    "@containerDetailNameLabel": {
+        "description": "Label for the container name field in the container detail page"
+    },
+    "containerDetailContainerWeightLabel": "Container Weight (g)",
+    "@containerDetailContainerWeightLabel": {
+        "description": "Label for the container weight field in the container detail page"
+    },
+    "containerDetailFoodWeightLabel": "Food Weight (g)",
+    "@containerDetailFoodWeightLabel": {
+        "description": "Label for the food weight field in the container detail page"
+    },
+    "containerDetailPortionLabel": "Portion",
+    "@containerDetailPortionLabel": {
+        "description": "Label for the portion field in the container detail page"
+    },
+    "containerDetailPortionWeightLabel": "Portion Weight (g)",
+    "@containerDetailPortionWeightLabel": {
+        "description": "Label for the portion weight field in the container detail page"
+    },
+    "containerDetailSaveButton": "Save Container",
+    "@containerDetailSaveButton": {
+        "description": "Label for the save container button in the container detail page"
     }
 }

@@ -10,4 +10,28 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get containerListPageTitle => 'Contenitori in Frigo';
+
+  @override
+  String get containerDetailNewTitle => 'Nuovo Contenitore';
+
+  @override
+  String get conteinerDetailEditTitle => 'Modifica Contenitore';
+
+  @override
+  String get containerDetailNameLabel => 'Nome Contenitore';
+
+  @override
+  String get containerDetailContainerWeightLabel => 'Peso Contenitore (g)';
+
+  @override
+  String get containerDetailFoodWeightLabel => 'Peso Cibo (g)';
+
+  @override
+  String get containerDetailPortionLabel => 'Porzione';
+
+  @override
+  String get containerDetailPortionWeightLabel => 'Peso Porzione (g)';
+
+  @override
+  String get containerDetailSaveButton => 'Salva Contenitore';
 }

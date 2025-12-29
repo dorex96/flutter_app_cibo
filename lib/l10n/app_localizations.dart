@@ -103,6 +103,54 @@ abstract class AppLocalizations {
   /// In it, this message translates to:
   /// **'Contenitori in Frigo'**
   String get containerListPageTitle;
+
+  /// The title for the new container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Nuovo Contenitore'**
+  String get containerDetailNewTitle;
+
+  /// The title for the edit container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Modifica Contenitore'**
+  String get conteinerDetailEditTitle;
+
+  /// Label for the container name field in the container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Nome Contenitore'**
+  String get containerDetailNameLabel;
+
+  /// Label for the container weight field in the container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Peso Contenitore (g)'**
+  String get containerDetailContainerWeightLabel;
+
+  /// Label for the food weight field in the container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Peso Cibo (g)'**
+  String get containerDetailFoodWeightLabel;
+
+  /// Label for the portion field in the container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Porzione'**
+  String get containerDetailPortionLabel;
+
+  /// Label for the portion weight field in the container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Peso Porzione (g)'**
+  String get containerDetailPortionWeightLabel;
+
+  /// Label for the save container button in the container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Salva Contenitore'**
+  String get containerDetailSaveButton;
 }
 
 class _AppLocalizationsDelegate
