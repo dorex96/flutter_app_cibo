@@ -1,6 +1,6 @@
 {
-    "helloWorld": "Hello World!",
-    "@helloWorld": {
-        "description": "The conventional newborn programmer greeting"
+    "containerListPageTitle": "Containers in Fridge",
+    "@containerListPageTitle": {
+        "description": "The title for the container list page"
     }
 }

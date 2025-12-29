@@ -98,11 +98,11 @@ abstract class AppLocalizations {
     Locale('it'),
   ];
 
-  /// The conventional newborn programmer greeting
+  /// The title for the container list page
   ///
   /// In it, this message translates to:
-  /// **'Ciao Mondo!'**
-  String get helloWorld;
+  /// **'Contenitori in Frigo'**
+  String get containerListPageTitle;
 }
 
 class _AppLocalizationsDelegate

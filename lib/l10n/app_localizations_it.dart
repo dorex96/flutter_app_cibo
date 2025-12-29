@@ -9,5 +9,5 @@ class AppLocalizationsIt extends AppLocalizations {
   AppLocalizationsIt([String locale = 'it']) : super(locale);
 
   @override
-  String get helloWorld => 'Ciao Mondo!';
+  String get containerListPageTitle => 'Contenitori in Frigo';
 }
