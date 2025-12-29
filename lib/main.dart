@@ -31,9 +31,9 @@ class MainApp extends StatelessWidget {
         create: (_) => ThemeCubit(),
         child: BlocBuilder<ThemeCubit, ThemeState>(
           builder: (_, state) => switch (state) {
-            ThemeReady(:final mode) => MaterialApp.router(
+            ThemeReady(themeMode: final themeMode) => MaterialApp.router(
               routerConfig: appRouter,
-              themeMode: mode,
+              themeMode: themeMode,
               theme: lightTheme,
               darkTheme: darkTheme,
               localizationsDelegates: [

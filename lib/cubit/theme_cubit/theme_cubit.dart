@@ -16,7 +16,7 @@ class ThemeCubit extends Cubit<ThemeState> {
   ///
   /// Returns [ThemeMode.system] if state is not [ThemeReady]
   ThemeMode get currentMode =>
-      state is ThemeReady ? (state as ThemeReady).mode : defaultThemeMode;
+      state is ThemeReady ? (state as ThemeReady).themeMode : defaultThemeMode;
 
   /// Sets the theme mode to the specified [mode]
   ///

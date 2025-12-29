@@ -12,8 +12,8 @@ final class ThemeInitial extends ThemeState {}
 /// Contains the current [ThemeMode] to be applied to the application.
 final class ThemeReady extends ThemeState {
   /// The current theme mode
-  final ThemeMode mode;
+  final ThemeMode themeMode;
 
-  /// Creates a new [ThemeReady] state with the specified [mode]
-  ThemeReady(this.mode);
+  /// Creates a new [ThemeReady] state with the specified [themeMode]
+  ThemeReady(this.themeMode);
 }

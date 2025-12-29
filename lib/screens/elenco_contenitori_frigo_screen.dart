@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
 
@@ -26,11 +27,13 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _addNewContainer,
+        onPressed: () => _addNewContainer(context),
         child: const Icon(Icons.add),
       ),
     );
   }
 
-  _addNewContainer() {}
+  _addNewContainer(BuildContext context) async {
+    await context.push('/dettaglio-contenitore-frigo/-1');
+  }
 }
