@@ -19,13 +19,10 @@ Thank you for your interest in contributing to flutter_app_cibo! We appreciate y
 
 1. Create a feature branch: `git checkout -b feature/your-feature`
 2. Make your changes
-3. Run tests and linting
-4. Submit a pull request with a clear description
+3. Submit a pull request with a clear description
 
 ## Code Quality
 
-- Write tests for new features
-- Ensure all tests pass
 - Update documentation as needed
 - Keep functions small and focused
 - Use meaningful variable and function names
