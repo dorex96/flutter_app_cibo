@@ -1,0 +1,64 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5360143009456191875",
+      "lastPropertyId": "8:1941727811085977414",
+      "name": "ContenitoreEntity",
+      "properties": [
+        {
+          "id": "1:6898863564306452794",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4727854869268610133",
+          "name": "nome",
+          "type": 9
+        },
+        {
+          "id": "3:40113786888073383",
+          "name": "pesoContenitore",
+          "type": 8
+        },
+        {
+          "id": "4:3363097790761066075",
+          "name": "pesoCibo",
+          "type": 8
+        },
+        {
+          "id": "5:5095424138460331555",
+          "name": "porzioni",
+          "type": 6
+        },
+        {
+          "id": "6:4249502453417767260",
+          "name": "pesoPorzione",
+          "type": 8
+        },
+        {
+          "id": "8:1941727811085977414",
+          "name": "dataCaricamento",
+          "type": 10
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:5360143009456191875",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    3920905685616008095
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

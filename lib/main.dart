@@ -11,8 +11,16 @@ import 'config/app_theme.dart';
 import 'constants/app_constants.dart';
 import 'cubit/theme_cubit/theme_cubit.dart';
 import 'l10n/app_localizations.dart';
+import 'services/objectbox.dart';
 
-void main() {
+/// Global instance of ObjectBox for database operations
+late ObjectBox objectBox;
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  objectBox = await ObjectBox.create();
+
   runApp(const MainApp());
 }
 

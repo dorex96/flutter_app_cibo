@@ -112,9 +112,15 @@ lib/
 │   ├── app_en.arb
 │   ├── app_it.arb
 │   └── app_localizations.dart
+├── models/                  # Modelli di dati
+│	└── entities/			 # Entità
+│		└── contenitore_entity.dart
+├── objectbox/               # File generati automaticamente per objectbox
+├── repositories/            # Raccoglitori di dati
 ├── screens/                 # Schermate dell'app
 │   ├── elenco_contenitori_frigo_screen.dart
 |	└── dettaglio_contenitore_frigo_screen
+├── services/                # Funzionalità di servizio
 ├── widgets/                 # Widget riutilizzabili
 |	├── contenitore_frigo_widget.dart
 |	└── input_dettaglio_contenitore_widget.dart

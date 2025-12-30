@@ -16,12 +16,27 @@ dependencies:
   flutter_screenutil: ^5.9.3
   go_router: ^17.0.1
   intl: any
+  objectbox: ^5.1.0
+  objectbox_flutter_libs: any
+  path: ^1.9.1
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  build_runner: ^2.10.4
+  objectbox_generator: any
 
 flutter:
   uses-material-design: true
   generate: true
+
+objectbox:
+  # Writes objectbox-model.json and objectbox.g.dart to lib/custom (and test/custom).
+  output_dir: objectbox
+  # Or optionally specify the lib and test output folder separately.
+  # output_dir:
+  #   lib: custom
+  #   test: other
+
