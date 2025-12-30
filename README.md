@@ -97,11 +97,12 @@ flutter build appbundle
 
 ```
 lib/
+├── bloc/					 # BLoC (Business Logic)
 ├── config/                  # Configurazioni dell'app
-│   ├── app_router.dart     # Configurazione routing
-│   └── app_theme.dart      # Configurazione tema
+│   ├── app_router.dart      # Configurazione routing
+│   └── app_theme.dart       # Configurazione tema
 ├── constants/               # Costanti dell'applicazione
-│   ├── app_constants.dart  # Costanti generali
+│   ├── app_constants.dart   # Costanti generali
 │   └── theme_constants.dart # Costanti tema
 ├── cubit/                   # BLoC (Business Logic)
 │   └── theme_cubit/
@@ -112,8 +113,11 @@ lib/
 │   ├── app_it.arb
 │   └── app_localizations.dart
 ├── screens/                 # Schermate dell'app
-│   └── elenco_contenitori_frigo_screen.dart
+│   ├── elenco_contenitori_frigo_screen.dart
+|	└── dettaglio_contenitore_frigo_screen
 ├── widgets/                 # Widget riutilizzabili
+|	├── contenitore_frigo_widget.dart
+|	└── input_dettaglio_contenitore_widget.dart
 └── main.dart                # Punto di ingresso
 ```
 
