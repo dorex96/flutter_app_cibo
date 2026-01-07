@@ -151,6 +151,18 @@ abstract class AppLocalizations {
   /// In it, this message translates to:
   /// **'Salva Contenitore'**
   String get containerDetailSaveButton;
+
+  /// Message displayed when there is no food in the fridge
+  ///
+  /// In it, this message translates to:
+  /// **'Non hai nulla da mangiare 😢'**
+  String get gen_No_Food;
+
+  /// Generic error message with error details
+  ///
+  /// In it, this message translates to:
+  /// **'Errore: {error}'**
+  String gen_Gen_Error(String error);
 }
 
 class _AppLocalizationsDelegate

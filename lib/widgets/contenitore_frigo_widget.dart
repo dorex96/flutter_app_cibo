@@ -14,7 +14,7 @@ class ContenitoreFrigoWidget extends StatelessWidget {
   });
 
   final String nomeContenitore;
-  final int quantitaDisponibile;
+  final double quantitaDisponibile;
   final int porzioniDisponibili;
   final DateTime dataInserimento;
 

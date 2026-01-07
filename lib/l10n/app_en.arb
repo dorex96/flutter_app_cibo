@@ -34,5 +34,18 @@
     "containerDetailSaveButton": "Save Container",
     "@containerDetailSaveButton": {
         "description": "Label for the save container button in the container detail page"
+    },
+    "gen_No_Food": "You have nothing to eat 😢",
+    "@gen_No_Food": {
+        "description": "Message displayed when there is no food in the fridge"
+    },
+    "gen_Gen_Error": "Error: {error}",
+    "@gen_Gen_Error": {
+        "description": "Generic error message with error details",
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
     }
 }

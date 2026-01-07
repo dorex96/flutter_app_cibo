@@ -98,6 +98,7 @@ flutter build appbundle
 ```
 lib/
 ├── bloc/					 # BLoC (Business Logic)
+|	└── elenco_contenitori_frigo_screen/
 ├── config/                  # Configurazioni dell'app
 │   ├── app_router.dart      # Configurazione routing
 │   └── app_theme.dart       # Configurazione tema

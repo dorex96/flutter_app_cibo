@@ -18,7 +18,8 @@ class ContenitoriRepository {
     return _box.get(id);
   }
 
-  List<ContenitoreEntity> getAll() {
+  /// Retrieves all ContenitoreEntity objects, sorted by dataCaricamento.
+  List<ContenitoreEntity> getAllSorted() {
     return _box.getAll()..sort((a, b) {
       final ad = a.dataCaricamento;
       final bd = b.dataCaricamento;

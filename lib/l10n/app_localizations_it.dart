@@ -34,4 +34,12 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get containerDetailSaveButton => 'Salva Contenitore';
+
+  @override
+  String get gen_No_Food => 'Non hai nulla da mangiare 😢';
+
+  @override
+  String gen_Gen_Error(String error) {
+    return 'Errore: $error';
+  }
 }
