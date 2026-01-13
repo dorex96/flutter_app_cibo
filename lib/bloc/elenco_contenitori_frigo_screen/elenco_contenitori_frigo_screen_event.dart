@@ -12,3 +12,9 @@ class EditContenitoreEvent extends ElencoContenitoriFrigoScreenEvent {
 
   final int id;
 }
+
+class DeleteContenitoreEvent extends ElencoContenitoriFrigoScreenEvent {
+  DeleteContenitoreEvent({required this.id});
+
+  final int id;
+}

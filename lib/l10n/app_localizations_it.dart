@@ -42,4 +42,18 @@ class AppLocalizationsIt extends AppLocalizations {
   String gen_Gen_Error(String error) {
     return 'Errore: $error';
   }
+
+  @override
+  String get gen_Confirm_Delete_Title => 'Conferma Eliminazione';
+
+  @override
+  String gen_Confirm_Delete_Message(String name) {
+    return 'Vuoi eliminare \"$name\"?';
+  }
+
+  @override
+  String get gen_Cancel => 'Annulla';
+
+  @override
+  String get gen_Delete => 'Elimina';
 }

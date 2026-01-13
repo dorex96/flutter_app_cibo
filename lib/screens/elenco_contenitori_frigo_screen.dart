@@ -58,17 +58,42 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
         return Center(child: Text(appLoc.gen_No_Food));
       }
 
+      final theme = Theme.of(context);
+
       return ListView.builder(
         itemCount: contenitori.length,
         itemBuilder: (context, index) {
           final contenitore = contenitori[index];
-          return InkWell(
-            onTap: () => _editContenitore(context, contenitore.id),
-            child: ContenitoreFrigoWidget(
-              dataInserimento: contenitore.dataCaricamento ?? DateTime.now(),
-              nomeContenitore: contenitore.nome ?? 'Senza nome',
-              porzioniDisponibili: contenitore.porzioni ?? 0,
-              quantitaDisponibile: contenitore.pesoCibo ?? 0,
+          return Dismissible(
+            key: Key('dismissible_${contenitore.id}'),
+            direction: DismissDirection.horizontal,
+            background: Container(
+              color: Theme.of(context).colorScheme.error,
+              alignment: Alignment.centerLeft,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Icon(Icons.delete, color: theme.colorScheme.onError),
+            ),
+            secondaryBackground: Container(
+              color: theme.colorScheme.error,
+              alignment: Alignment.centerRight,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Icon(Icons.delete, color: theme.colorScheme.onError),
+            ),
+            confirmDismiss: (direction) =>
+                _confirmDelete(context, contenitore.nome),
+            onDismissed: (direction) {
+              context.read<ElencoContenitoriFrigoScreenBloc>().add(
+                DeleteContenitoreEvent(id: contenitore.id),
+              );
+            },
+            child: InkWell(
+              onTap: () => _editContenitore(context, contenitore.id),
+              child: ContenitoreFrigoWidget(
+                dataInserimento: contenitore.dataCaricamento ?? DateTime.now(),
+                nomeContenitore: contenitore.nome ?? 'Senza nome',
+                porzioniDisponibili: contenitore.porzioni ?? 0,
+                quantitaDisponibile: contenitore.pesoCibo ?? 0,
+              ),
             ),
           );
         },
@@ -89,6 +114,27 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
   _editContenitore(BuildContext context, int id) async {
     context.read<ElencoContenitoriFrigoScreenBloc>().add(
       EditContenitoreEvent(id: id),
+    );
+  }
+
+  Future<bool?> _confirmDelete(BuildContext context, String? nome) {
+    final appLoc = AppLocalizations.of(context)!;
+    return showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(appLoc.gen_Confirm_Delete_Title),
+        content: Text(appLoc.gen_Confirm_Delete_Message(nome ?? 'Senza nome')),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(appLoc.gen_Cancel),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: Text(appLoc.gen_Delete),
+          ),
+        ],
+      ),
     );
   }
 }

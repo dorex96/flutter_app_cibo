@@ -20,6 +20,7 @@ class ElencoContenitoriFrigoScreenBloc
     on<LoadContenitoriEvent>(_loadContenitori);
     on<AddContenitoreEvent>(_addContenitore);
     on<EditContenitoreEvent>(_editContenitore);
+    on<DeleteContenitoreEvent>(_deleteContenitore);
 
     add(LoadContenitoriEvent());
   }
@@ -58,6 +59,18 @@ class ElencoContenitoriFrigoScreenBloc
   ) async {
     try {
       emit(ElencoContenitoriFrigoScreenEdit(event.id));
+    } catch (e) {
+      emit(ElencoContenitoriFrigoScreenError(e.toString()));
+    }
+  }
+
+  Future<void> _deleteContenitore(
+    DeleteContenitoreEvent event,
+    Emitter<ElencoContenitoriFrigoScreenState> emit,
+  ) async {
+    try {
+      _contenitoriRepository.delete(event.id);
+      add(LoadContenitoriEvent());
     } catch (e) {
       emit(ElencoContenitoriFrigoScreenError(e.toString()));
     }

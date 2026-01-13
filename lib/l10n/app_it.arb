@@ -47,5 +47,26 @@
                 "type": "String"
             }
         }
+    },
+    "gen_Confirm_Delete_Title": "Conferma Eliminazione",
+    "@gen_Confirm_Delete_Title": {
+        "description": "Title for the delete confirmation dialog"
+    },
+    "gen_Confirm_Delete_Message": "Vuoi eliminare \"{name}\"?",
+    "@gen_Confirm_Delete_Message": {
+        "description": "Message for the delete confirmation dialog",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "gen_Cancel": "Annulla",
+    "@gen_Cancel": {
+        "description": "Cancel button label"
+    },
+    "gen_Delete": "Elimina",
+    "@gen_Delete": {
+        "description": "Delete button label"
     }
 }

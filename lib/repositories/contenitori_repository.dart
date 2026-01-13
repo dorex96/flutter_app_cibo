@@ -39,4 +39,9 @@ class ContenitoriRepository {
       return ad.compareTo(bd);
     });
   }
+
+  /// Deletes a ContenitoreEntity by its ID.
+  bool delete(int id) {
+    return _box.remove(id);
+  }
 }

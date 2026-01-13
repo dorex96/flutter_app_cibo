@@ -163,6 +163,30 @@ abstract class AppLocalizations {
   /// In it, this message translates to:
   /// **'Errore: {error}'**
   String gen_Gen_Error(String error);
+
+  /// Title for the delete confirmation dialog
+  ///
+  /// In it, this message translates to:
+  /// **'Conferma Eliminazione'**
+  String get gen_Confirm_Delete_Title;
+
+  /// Message for the delete confirmation dialog
+  ///
+  /// In it, this message translates to:
+  /// **'Vuoi eliminare \"{name}\"?'**
+  String gen_Confirm_Delete_Message(String name);
+
+  /// Cancel button label
+  ///
+  /// In it, this message translates to:
+  /// **'Annulla'**
+  String get gen_Cancel;
+
+  /// Delete button label
+  ///
+  /// In it, this message translates to:
+  /// **'Elimina'**
+  String get gen_Delete;
 }
 
 class _AppLocalizationsDelegate
