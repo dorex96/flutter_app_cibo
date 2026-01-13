@@ -14,6 +14,14 @@ class ContenitoriRepository {
     return _box.put(entity);
   }
 
+  void put(ContenitoreEntity entity) {
+    _box.put(entity);
+  }
+
+  ContenitoreEntity? get(int id) {
+    return _box.get(id);
+  }
+
   ContenitoreEntity? getById(int id) {
     return _box.get(id);
   }
