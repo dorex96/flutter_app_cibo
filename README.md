@@ -125,6 +125,7 @@ lib/
 ├── widgets/                 # Widget riutilizzabili
 |	├── contenitore_frigo_widget.dart
 |	└── input_dettaglio_contenitore_widget.dart
+├──	theme/                   # File dei temi
 └── main.dart                # Punto di ingresso
 ```
 
@@ -136,12 +137,6 @@ lib/
 
 ```bash
 flutter pub add package_name
-```
-
-### Eseguire i test
-
-```bash
-flutter test
 ```
 
 ### Linting e formattazione
@@ -204,10 +199,7 @@ No: funziona interamente offline.
 No: tutto rimane sul dispositivo.
 
 **È solo in italiano?**
-Per ora sì, ma le traduzioni sono benvenute!
-
-**Come contribuisco?**
-Leggi la sezione [Contribuire](#-contribuire) e il [CONTRIBUTING.md](CONTRIBUTING.md).
+Per ora italiano e inglese.
 
 ---
 
@@ -224,9 +216,7 @@ Per contribuire:
 Prima di aprire una PR, assicurati di:
 - Formattare il codice: `dart format .`
 - Eseguire l'analisi: `dart analyze`
-- Aggiornare la documentazione se necessario
-
-Leggi il [CONTRIBUTING.md](CONTRIBUTING.md) per ulteriori dettagli.
+- Descrivi chiaramente le modifiche effettuate.
 
 ---
 
@@ -239,7 +229,6 @@ Questo progetto è licenziato sotto la MIT License - vedi il file [LICENSE](LICE
 ## 📧 Contatti
 
 - 📝 Apri una [issue](../../issues) per segnalare bug o suggerire funzionalità
-- 💬 Usa le [discussioni](../../discussions) per domande e conversazioni
 
 ---
 
