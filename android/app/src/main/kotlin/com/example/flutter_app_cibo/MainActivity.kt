@@ -1,4 +1,4 @@
-package com.example.flutter_app_cibo
+package com.tverdohleb.appcibo
 
 import io.flutter.embedding.android.FlutterActivity
 
