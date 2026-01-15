@@ -13,9 +13,11 @@ class DettaglioContenitoreFrigoScreen extends StatelessWidget {
   const DettaglioContenitoreFrigoScreen({
     super.key,
     required this.idContenitore,
+    this.isNew = false,
   });
 
   final int idContenitore;
+  final bool isNew;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +46,13 @@ class DettaglioContenitoreFrigoScreen extends StatelessWidget {
           final cubit = context.read<DettaglioContenitoreCubit>();
 
           return Scaffold(
-            appBar: AppBar(title: Text(appLoc.containerDetailNewTitle)),
+            appBar: AppBar(
+              title: Text(
+                isNew
+                    ? appLoc.containerDetailNewTitle
+                    : appLoc.containerDetailEditTitle,
+              ),
+            ),
             body: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,

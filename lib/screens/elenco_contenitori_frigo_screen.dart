@@ -36,7 +36,9 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
     ElencoContenitoriFrigoScreenState state,
   ) async {
     if (state is ElencoContenitoriFrigoScreenEdit) {
-      await context.push('/dettaglio-contenitore-frigo/${state.id}');
+      await context.push(
+        '/dettaglio-contenitore-frigo/${state.id}?isNew=${state.isNew}',
+      );
       if (context.mounted) {
         context.read<ElencoContenitoriFrigoScreenBloc>().add(
           LoadContenitoriEvent(),

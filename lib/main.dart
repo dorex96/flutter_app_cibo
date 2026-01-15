@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'config/app_router.dart';
-import 'config/app_theme.dart';
 import 'constants/app_constants.dart';
+import 'theme/theme.dart';
 import 'cubit/theme_cubit/theme_cubit.dart';
 import 'l10n/app_localizations.dart';
 import 'services/objectbox.dart';

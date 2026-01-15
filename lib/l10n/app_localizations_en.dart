@@ -15,7 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get containerDetailNewTitle => 'New Container';
 
   @override
-  String get conteinerDetailEditTitle => 'Edit Container';
+  String get containerDetailEditTitle => 'Edit Container';
 
   @override
   String get containerDetailNameLabel => 'Container Name';

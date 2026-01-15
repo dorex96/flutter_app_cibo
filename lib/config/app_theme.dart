@@ -1,10 +1,7 @@
 /// Theme configuration for the application
+///
+/// @deprecated Use the theme folder instead (lib/theme/)
+/// This file is kept for backward compatibility
 library;
 
-import 'package:flutter/material.dart';
-
-/// Light theme configuration
-final lightTheme = ThemeData.light();
-
-/// Dark theme configuration
-final darkTheme = ThemeData.dark();
+export '../theme/theme.dart';

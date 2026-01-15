@@ -7,8 +7,8 @@
     "@containerDetailNewTitle": {
         "description": "The title for the new container detail page"
     },
-    "conteinerDetailEditTitle": "Modifica Contenitore",
-    "@conteinerDetailEditTitle": {
+    "containerDetailEditTitle": "Modifica Contenitore",
+    "@containerDetailEditTitle": {
         "description": "The title for the edit container detail page"
     },
     "containerDetailNameLabel": "Nome Contenitore",

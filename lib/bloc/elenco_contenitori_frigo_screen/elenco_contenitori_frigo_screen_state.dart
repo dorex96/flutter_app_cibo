@@ -24,5 +24,6 @@ final class ElencoContenitoriFrigoScreenError
 final class ElencoContenitoriFrigoScreenEdit
     extends ElencoContenitoriFrigoScreenState {
   final int id;
-  ElencoContenitoriFrigoScreenEdit(this.id);
+  final bool isNew;
+  ElencoContenitoriFrigoScreenEdit({required this.id, required this.isNew});
 }

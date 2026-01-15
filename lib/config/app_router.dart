@@ -24,10 +24,14 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/dettaglio-contenitore-frigo/:idContenitore',
       builder: (context, state) {
-        final int idContenitore =
-            int.tryParse(state.pathParameters['idContenitore'] ?? '') ??
-            -1; // Default to -1 if is new container
-        return DettaglioContenitoreFrigoScreen(idContenitore: idContenitore);
+        final int idContenitore = int.tryParse(
+          state.pathParameters['idContenitore']!,
+        )!;
+        final bool isNew = state.uri.queryParameters['isNew'] == 'true';
+        return DettaglioContenitoreFrigoScreen(
+          idContenitore: idContenitore,
+          isNew: isNew,
+        );
       },
     ),
   ],

@@ -114,7 +114,7 @@ abstract class AppLocalizations {
   ///
   /// In it, this message translates to:
   /// **'Modifica Contenitore'**
-  String get conteinerDetailEditTitle;
+  String get containerDetailEditTitle;
 
   /// Label for the container name field in the container detail page
   ///
