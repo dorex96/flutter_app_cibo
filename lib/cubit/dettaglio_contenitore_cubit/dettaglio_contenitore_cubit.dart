@@ -58,108 +58,195 @@ class DettaglioContenitoreCubit extends Cubit<DettaglioContenitoreState> {
 
   void _onFieldChanged(_FieldType changedField) {
     if (_isUpdating) return;
-
-    final totalWeight = double.tryParse(totalWeightController.text);
-    final containerWeight = double.tryParse(containerWeightController.text);
-    final foodWeight = double.tryParse(foodWeightController.text);
-    final portions = int.tryParse(portionController.text);
-    final portionWeight = double.tryParse(portionWeightController.text);
-
     _isUpdating = true;
 
     try {
-      switch (changedField) {
-        case _FieldType.totalWeight:
-          _updateFromTotalWeight(totalWeight, containerWeight, foodWeight);
-          break;
-        case _FieldType.containerWeight:
-          _updateFromContainerWeight(totalWeight, containerWeight, foodWeight);
-          break;
-        case _FieldType.foodWeight:
-          _updateFromFoodWeight(
-            totalWeight,
-            containerWeight,
-            foodWeight,
-            portions,
-            portionWeight,
-          );
-          break;
-        case _FieldType.portions:
-          _updateFromPortions(foodWeight, portions, portionWeight);
-          break;
-        case _FieldType.portionWeight:
-          _updateFromPortionWeight(foodWeight, portions, portionWeight);
-          break;
-      }
+      _calculateAllPossibleValues(changedField);
     } finally {
       _isUpdating = false;
     }
   }
 
-  /// Aggiorna quando cambia il peso totale
-  void _updateFromTotalWeight(
-    double? totalWeight,
-    double? containerWeight,
-    double? foodWeight,
-  ) {
-    if (totalWeight == null || totalWeight <= 0) return;
+  /// Calcola tutti i valori possibili basandosi sui dati disponibili
+  void _calculateAllPossibleValues(_FieldType changedField) {
+    // Leggi i valori attuali
+    double? totalWeight = double.tryParse(totalWeightController.text);
+    double? containerWeight = double.tryParse(containerWeightController.text);
+    double? foodWeight = double.tryParse(foodWeightController.text);
+    int? portions = int.tryParse(portionController.text);
+    double? portionWeight = double.tryParse(portionWeightController.text);
 
-    if (containerWeight != null && containerWeight > 0) {
-      // Calcola peso cibo = peso totale - peso contenitore
-      final newFoodWeight = totalWeight - containerWeight;
-      if (newFoodWeight >= 0) {
-        _updateController(foodWeightController, _formatDouble(newFoodWeight));
+    // === CALCOLI PESI (totalWeight, containerWeight, foodWeight) ===
+    // Relazione: totalWeight = containerWeight + foodWeight
+
+    // Se il campo modificato è nel gruppo pesi, calcola il terzo valore mancante
+    if (changedField == _FieldType.totalWeight ||
+        changedField == _FieldType.containerWeight ||
+        changedField == _FieldType.foodWeight) {
+      if (changedField == _FieldType.totalWeight &&
+          totalWeight != null &&
+          totalWeight > 0) {
+        if (containerWeight != null && containerWeight >= 0) {
+          final newFoodWeight = totalWeight - containerWeight;
+          if (newFoodWeight >= 0) {
+            _updateController(
+              foodWeightController,
+              _formatDouble(newFoodWeight),
+            );
+            foodWeight = newFoodWeight;
+          }
+        } else if (foodWeight != null && foodWeight >= 0) {
+          final newContainerWeight = totalWeight - foodWeight;
+          if (newContainerWeight >= 0) {
+            _updateController(
+              containerWeightController,
+              _formatDouble(newContainerWeight),
+            );
+            containerWeight = newContainerWeight;
+          }
+        }
       }
-    } else if (foodWeight != null && foodWeight >= 0) {
-      // Calcola peso contenitore = peso totale - peso cibo
-      final newContainerWeight = totalWeight - foodWeight;
-      if (newContainerWeight >= 0) {
+
+      if (changedField == _FieldType.containerWeight &&
+          containerWeight != null &&
+          containerWeight >= 0) {
+        if (totalWeight != null && totalWeight > 0) {
+          final newFoodWeight = totalWeight - containerWeight;
+          if (newFoodWeight >= 0) {
+            _updateController(
+              foodWeightController,
+              _formatDouble(newFoodWeight),
+            );
+            foodWeight = newFoodWeight;
+          }
+        } else if (foodWeight != null && foodWeight >= 0) {
+          final newTotalWeight = containerWeight + foodWeight;
+          _updateController(
+            totalWeightController,
+            _formatDouble(newTotalWeight),
+          );
+          totalWeight = newTotalWeight;
+        }
+      }
+
+      if (changedField == _FieldType.foodWeight &&
+          foodWeight != null &&
+          foodWeight >= 0) {
+        if (containerWeight != null && containerWeight >= 0) {
+          final newTotalWeight = foodWeight + containerWeight;
+          _updateController(
+            totalWeightController,
+            _formatDouble(newTotalWeight),
+          );
+          totalWeight = newTotalWeight;
+        } else if (totalWeight != null && totalWeight > 0) {
+          final newContainerWeight = totalWeight - foodWeight;
+          if (newContainerWeight >= 0) {
+            _updateController(
+              containerWeightController,
+              _formatDouble(newContainerWeight),
+            );
+            containerWeight = newContainerWeight;
+          }
+        }
+      }
+    }
+
+    // === CALCOLI PORZIONI (foodWeight, portions, portionWeight) ===
+    // Relazione: foodWeight = portions * portionWeight
+
+    if (changedField == _FieldType.portions &&
+        portions != null &&
+        portions > 0) {
+      if (foodWeight != null && foodWeight > 0) {
+        // Calcola peso porzione
+        final newPortionWeight = foodWeight / portions;
         _updateController(
-          containerWeightController,
-          _formatDouble(newContainerWeight),
+          portionWeightController,
+          newPortionWeight.toStringAsFixed(2),
         );
-      }
-    }
-  }
-
-  /// Aggiorna quando cambia il peso contenitore
-  void _updateFromContainerWeight(
-    double? totalWeight,
-    double? containerWeight,
-    double? foodWeight,
-  ) {
-    if (containerWeight == null || containerWeight < 0) return;
-
-    if (totalWeight != null && totalWeight > 0) {
-      // Calcola peso cibo = peso totale - peso contenitore
-      final newFoodWeight = totalWeight - containerWeight;
-      if (newFoodWeight >= 0) {
+        portionWeight = newPortionWeight;
+      } else if (portionWeight != null && portionWeight > 0) {
+        // Calcola peso cibo
+        final newFoodWeight = portions * portionWeight;
         _updateController(foodWeightController, _formatDouble(newFoodWeight));
+        foodWeight = newFoodWeight;
+        // Ora prova a calcolare i pesi mancanti
+        _recalculateWeights(totalWeight, containerWeight, foodWeight);
       }
-    } else if (foodWeight != null && foodWeight >= 0) {
-      // Calcola peso totale = peso contenitore + peso cibo
-      final newTotalWeight = containerWeight + foodWeight;
-      _updateController(totalWeightController, _formatDouble(newTotalWeight));
+    }
+
+    if (changedField == _FieldType.portionWeight &&
+        portionWeight != null &&
+        portionWeight > 0) {
+      if (foodWeight != null && foodWeight > 0) {
+        // Calcola porzioni
+        final newPortions = (foodWeight / portionWeight).round();
+        if (newPortions > 0) {
+          _updateController(portionController, newPortions.toString());
+          portions = newPortions;
+        }
+      } else if (portions != null && portions > 0) {
+        // Calcola peso cibo
+        final newFoodWeight = portions * portionWeight;
+        _updateController(foodWeightController, _formatDouble(newFoodWeight));
+        foodWeight = newFoodWeight;
+        // Ora prova a calcolare i pesi mancanti
+        _recalculateWeights(totalWeight, containerWeight, foodWeight);
+      }
+    }
+
+    // Se è cambiato foodWeight, aggiorna anche le porzioni se possibile
+    if (changedField == _FieldType.foodWeight &&
+        foodWeight != null &&
+        foodWeight > 0) {
+      if (portions != null && portions > 0) {
+        final newPortionWeight = foodWeight / portions;
+        _updateController(
+          portionWeightController,
+          newPortionWeight.toStringAsFixed(2),
+        );
+      } else if (portionWeight != null && portionWeight > 0) {
+        final newPortions = (foodWeight / portionWeight).round();
+        if (newPortions > 0) {
+          _updateController(portionController, newPortions.toString());
+        }
+      }
+    }
+
+    // Se è cambiato totalWeight o containerWeight e abbiamo calcolato foodWeight,
+    // aggiorna anche le porzioni se possibile
+    if ((changedField == _FieldType.totalWeight ||
+            changedField == _FieldType.containerWeight) &&
+        foodWeight != null &&
+        foodWeight > 0) {
+      if (portions != null && portions > 0) {
+        final newPortionWeight = foodWeight / portions;
+        _updateController(
+          portionWeightController,
+          newPortionWeight.toStringAsFixed(2),
+        );
+      } else if (portionWeight != null && portionWeight > 0) {
+        final newPortions = (foodWeight / portionWeight).round();
+        if (newPortions > 0) {
+          _updateController(portionController, newPortions.toString());
+        }
+      }
     }
   }
 
-  /// Aggiorna quando cambia il peso cibo
-  void _updateFromFoodWeight(
+  /// Ricalcola totalWeight o containerWeight quando foodWeight cambia
+  void _recalculateWeights(
     double? totalWeight,
     double? containerWeight,
     double? foodWeight,
-    int? portions,
-    double? portionWeight,
   ) {
     if (foodWeight == null || foodWeight < 0) return;
 
-    // Calcoli relativi al peso totale
     if (containerWeight != null && containerWeight >= 0) {
-      // Calcola peso totale = peso cibo + peso contenitore
       final newTotalWeight = foodWeight + containerWeight;
       _updateController(totalWeightController, _formatDouble(newTotalWeight));
-    } else if (totalWeight != null && totalWeight > 0 && foodWeight > 0) {
-      // Calcola peso contenitore = peso totale - peso cibo
+    } else if (totalWeight != null && totalWeight > 0) {
       final newContainerWeight = totalWeight - foodWeight;
       if (newContainerWeight >= 0) {
         _updateController(
@@ -167,67 +254,6 @@ class DettaglioContenitoreCubit extends Cubit<DettaglioContenitoreState> {
           _formatDouble(newContainerWeight),
         );
       }
-    }
-
-    // Calcoli relativi alle porzioni (solo se foodWeight > 0)
-    if (foodWeight <= 0) return;
-
-    if (portions != null && portions > 0) {
-      // Calcola peso porzione = peso cibo / porzioni
-      final newPortionWeight = foodWeight / portions;
-      _updateController(
-        portionWeightController,
-        _formatDouble(newPortionWeight),
-      );
-    } else if (portionWeight != null && portionWeight > 0) {
-      // Calcola porzioni = peso cibo / peso porzione
-      final newPortions = (foodWeight / portionWeight).round();
-      if (newPortions > 0) {
-        _updateController(portionController, newPortions.toString());
-      }
-    }
-  }
-
-  /// Aggiorna quando cambiano le porzioni
-  void _updateFromPortions(
-    double? foodWeight,
-    int? portions,
-    double? portionWeight,
-  ) {
-    if (portions == null || portions <= 0) return;
-
-    if (foodWeight != null && foodWeight > 0) {
-      // Calcola peso porzione = peso cibo / porzioni
-      final newPortionWeight = foodWeight / portions;
-      _updateController(
-        portionWeightController,
-        _formatDouble(newPortionWeight),
-      );
-    } else if (portionWeight != null && portionWeight > 0) {
-      // Calcola peso cibo = porzioni * peso porzione
-      final newFoodWeight = portions * portionWeight;
-      _updateController(foodWeightController, _formatDouble(newFoodWeight));
-    }
-  }
-
-  /// Aggiorna quando cambia il peso porzione
-  void _updateFromPortionWeight(
-    double? foodWeight,
-    int? portions,
-    double? portionWeight,
-  ) {
-    if (portionWeight == null || portionWeight <= 0) return;
-
-    if (foodWeight != null && foodWeight > 0) {
-      // Calcola porzioni = peso cibo / peso porzione
-      final newPortions = (foodWeight / portionWeight).round();
-      if (newPortions > 0) {
-        _updateController(portionController, newPortions.toString());
-      }
-    } else if (portions != null && portions > 0) {
-      // Calcola peso cibo = porzioni * peso porzione
-      final newFoodWeight = portions * portionWeight;
-      _updateController(foodWeightController, _formatDouble(newFoodWeight));
     }
   }
 
