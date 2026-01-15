@@ -51,6 +51,7 @@ class MainApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: supportedLocales,
+              debugShowCheckedModeBanner: false,
             ),
             _ => const SizedBox(),
           },
