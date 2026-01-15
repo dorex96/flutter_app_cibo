@@ -1,0 +1,76 @@
+{
+    "containerListPageTitle": "Containers in Fridge",
+    "@containerListPageTitle": {
+        "description": "The title for the container list page"
+    },
+    "containerDetailNewTitle": "New Container",
+    "@containerDetailNewTitle": {
+        "description": "The title for the new container detail page"
+    },
+    "containerDetailEditTitle": "Edit Container",
+    "@containerDetailEditTitle": {
+        "description": "The title for the edit container detail page"
+    },
+    "containerDetailNameLabel": "Container Name",
+    "@containerDetailNameLabel": {
+        "description": "Label for the container name field in the container detail page"
+    },
+    "containerDetailContainerWeightLabel": "Container Weight (g)",
+    "@containerDetailContainerWeightLabel": {
+        "description": "Label for the container weight field in the container detail page"
+    },
+    "containerDetailTotalWeightLabel": "Total Weight (g)",
+    "@containerDetailTotalWeightLabel": {
+        "description": "Label for the total weight field (container + food) in the container detail page"
+    },
+    "containerDetailFoodWeightLabel": "Food Weight (g)",
+    "@containerDetailFoodWeightLabel": {
+        "description": "Label for the food weight field in the container detail page"
+    },
+    "containerDetailPortionLabel": "Portion",
+    "@containerDetailPortionLabel": {
+        "description": "Label for the portion field in the container detail page"
+    },
+    "containerDetailPortionWeightLabel": "Portion Weight (g)",
+    "@containerDetailPortionWeightLabel": {
+        "description": "Label for the portion weight field in the container detail page"
+    },
+    "containerDetailSaveButton": "Save Container",
+    "@containerDetailSaveButton": {
+        "description": "Label for the save container button in the container detail page"
+    },
+    "gen_No_Food": "You have nothing to eat 😢",
+    "@gen_No_Food": {
+        "description": "Message displayed when there is no food in the fridge"
+    },
+    "gen_Gen_Error": "Error: {error}",
+    "@gen_Gen_Error": {
+        "description": "Generic error message with error details",
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    "gen_Confirm_Delete_Title": "Confirm Deletion",
+    "@gen_Confirm_Delete_Title": {
+        "description": "Title for the delete confirmation dialog"
+    },
+    "gen_Confirm_Delete_Message": "Do you want to delete \"{name}\"?",
+    "@gen_Confirm_Delete_Message": {
+        "description": "Message for the delete confirmation dialog",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "gen_Cancel": "Cancel",
+    "@gen_Cancel": {
+        "description": "Cancel button label"
+    },
+    "gen_Delete": "Delete",
+    "@gen_Delete": {
+        "description": "Delete button label"
+    }
+}

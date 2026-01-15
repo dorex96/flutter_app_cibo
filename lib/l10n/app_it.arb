@@ -1,0 +1,76 @@
+{
+    "containerListPageTitle": "Contenitori in Frigo",
+    "@containerListPageTitle": {
+        "description": "The title for the container list page"
+    },
+    "containerDetailNewTitle": "Nuovo Contenitore",
+    "@containerDetailNewTitle": {
+        "description": "The title for the new container detail page"
+    },
+    "containerDetailEditTitle": "Modifica Contenitore",
+    "@containerDetailEditTitle": {
+        "description": "The title for the edit container detail page"
+    },
+    "containerDetailNameLabel": "Nome Contenitore",
+    "@containerDetailNameLabel": {
+        "description": "Label for the container name field in the container detail page"
+    },
+    "containerDetailContainerWeightLabel": "Peso Contenitore (g)",
+    "@containerDetailContainerWeightLabel": {
+        "description": "Label for the container weight field in the container detail page"
+    },
+    "containerDetailTotalWeightLabel": "Peso Totale (g)",
+    "@containerDetailTotalWeightLabel": {
+        "description": "Label for the total weight field (container + food) in the container detail page"
+    },
+    "containerDetailFoodWeightLabel": "Peso Cibo (g)",
+    "@containerDetailFoodWeightLabel": {
+        "description": "Label for the food weight field in the container detail page"
+    },
+    "containerDetailPortionLabel": "Porzione",
+    "@containerDetailPortionLabel": {
+        "description": "Label for the portion field in the container detail page"
+    },
+    "containerDetailPortionWeightLabel": "Peso Porzione (g)",
+    "@containerDetailPortionWeightLabel": {
+        "description": "Label for the portion weight field in the container detail page"
+    },
+    "containerDetailSaveButton": "Salva Contenitore",
+    "@containerDetailSaveButton": {
+        "description": "Label for the save container button in the container detail page"
+    },
+    "gen_No_Food": "Non hai nulla da mangiare 😢",
+    "@gen_No_Food": {
+        "description": "Message displayed when there is no food in the fridge"
+    },
+    "gen_Gen_Error": "Errore: {error}",
+    "@gen_Gen_Error": {
+        "description": "Generic error message with error details",
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    "gen_Confirm_Delete_Title": "Conferma Eliminazione",
+    "@gen_Confirm_Delete_Title": {
+        "description": "Title for the delete confirmation dialog"
+    },
+    "gen_Confirm_Delete_Message": "Vuoi eliminare \"{name}\"?",
+    "@gen_Confirm_Delete_Message": {
+        "description": "Message for the delete confirmation dialog",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "gen_Cancel": "Annulla",
+    "@gen_Cancel": {
+        "description": "Cancel button label"
+    },
+    "gen_Delete": "Elimina",
+    "@gen_Delete": {
+        "description": "Delete button label"
+    }
+}
