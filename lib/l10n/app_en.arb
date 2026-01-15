@@ -19,6 +19,10 @@
     "@containerDetailContainerWeightLabel": {
         "description": "Label for the container weight field in the container detail page"
     },
+    "containerDetailTotalWeightLabel": "Total Weight (g)",
+    "@containerDetailTotalWeightLabel": {
+        "description": "Label for the total weight field (container + food) in the container detail page"
+    },
     "containerDetailFoodWeightLabel": "Food Weight (g)",
     "@containerDetailFoodWeightLabel": {
         "description": "Label for the food weight field in the container detail page"

@@ -128,6 +128,12 @@ abstract class AppLocalizations {
   /// **'Peso Contenitore (g)'**
   String get containerDetailContainerWeightLabel;
 
+  /// Label for the total weight field (container + food) in the container detail page
+  ///
+  /// In it, this message translates to:
+  /// **'Peso Totale (g)'**
+  String get containerDetailTotalWeightLabel;
+
   /// Label for the food weight field in the container detail page
   ///
   /// In it, this message translates to:

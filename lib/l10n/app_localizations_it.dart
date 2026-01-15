@@ -24,6 +24,9 @@ class AppLocalizationsIt extends AppLocalizations {
   String get containerDetailContainerWeightLabel => 'Peso Contenitore (g)';
 
   @override
+  String get containerDetailTotalWeightLabel => 'Peso Totale (g)';
+
+  @override
   String get containerDetailFoodWeightLabel => 'Peso Cibo (g)';
 
   @override

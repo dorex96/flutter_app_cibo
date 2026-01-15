@@ -75,6 +75,12 @@ class DettaglioContenitoreFrigoScreen extends StatelessWidget {
                             controller: cubit.nameController,
                           ),
                           InputDettaglioContenitoreWidget(
+                            key: Key('totalweight_$idContenitore'),
+                            label: appLoc.containerDetailTotalWeightLabel,
+                            controller: cubit.totalWeightController,
+                            keyboardType: TextInputType.number,
+                          ),
+                          InputDettaglioContenitoreWidget(
                             key: Key('contweight_$idContenitore'),
                             label: appLoc.containerDetailContainerWeightLabel,
                             controller: cubit.containerWeightController,
