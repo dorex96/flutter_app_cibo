@@ -4,7 +4,7 @@ Tieniti in forma senza stress: calcola le porzioni, i grammi da prelevare e tien
 
 ![Flutter](https://img.shields.io/badge/Flutter-Ready-blue?logo=flutter)
 ![Piattaforme](https://img.shields.io/badge/iOS%20%26%20Android-Supportate-green)
-![Versione](https://img.shields.io/badge/Versione-0.1.0-orange)
+![Versione](https://img.shields.io/badge/Versione-1.0.0-green)
 ![Offline](https://img.shields.io/badge/Funziona-Offline-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
