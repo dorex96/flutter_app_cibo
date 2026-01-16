@@ -297,6 +297,8 @@ class DettaglioContenitoreCubit extends Cubit<DettaglioContenitoreState> {
 
   Future<void> saveContenitore() async {
     try {
+      final existingContenitore = _repository.get(contenitoreId);
+
       final contenitore = ContenitoreEntity()
         ..id = contenitoreId
         ..nome = nameController.text.isEmpty ? null : nameController.text
@@ -312,7 +314,8 @@ class DettaglioContenitoreCubit extends Cubit<DettaglioContenitoreState> {
         ..pesoPorzione = portionWeightController.text.isEmpty
             ? null
             : double.tryParse(portionWeightController.text)
-        ..dataCaricamento = DateTime.now();
+        ..dataCaricamento =
+            existingContenitore?.dataCaricamento ?? DateTime.now();
 
       _repository.put(contenitore);
       emit(DettaglioContenitoreSaved());

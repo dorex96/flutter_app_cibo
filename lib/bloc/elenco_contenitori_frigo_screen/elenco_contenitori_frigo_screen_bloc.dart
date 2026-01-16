@@ -46,7 +46,10 @@ class ElencoContenitoriFrigoScreenBloc
     Emitter<ElencoContenitoriFrigoScreenState> emit,
   ) async {
     try {
-      final newId = _contenitoriRepository.add(ContenitoreEntity());
+      final newContenitore = ContenitoreEntity();
+      newContenitore.dataCaricamento = DateTime.now();
+
+      final newId = _contenitoriRepository.add(newContenitore);
       emit(ElencoContenitoriFrigoScreenEdit(id: newId, isNew: true));
     } catch (e) {
       emit(ElencoContenitoriFrigoScreenError(e.toString()));
