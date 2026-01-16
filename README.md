@@ -1,4 +1,4 @@
-# 🍽️ flutter_app_cibo
+# 🍽️ Cibo
 
 Tieniti in forma senza stress: calcola le porzioni, i grammi da prelevare e tieni traccia dei tuoi piatti… tutto offline, con semplicità! 😄
 
@@ -232,4 +232,4 @@ Questo progetto è licenziato sotto la MIT License - vedi il file [LICENSE](LICE
 
 ---
 
-Grazie per aver provato **flutter_app_cibo**! Buone porzioni e buon appetito! 🍲
+Grazie per aver provato **Cibo**! Buone porzioni e buon appetito! 🍲
