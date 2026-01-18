@@ -31,17 +31,22 @@ android {
     }
 
     signingConfigs {
-        release {
-            if (System.getenv()["CI"]) { // CI=true is exported by Codemagic
-                storeFile file(System.getenv()["CM_KEYSTORE_PATH"])
-                storePassword System.getenv()["CM_KEYSTORE_PASSWORD"]
-                keyAlias System.getenv()["CM_KEY_ALIAS"]
-                keyPassword System.getenv()["CM_KEY_PASSWORD"]
+        create("release") {
+            if (System.getenv("CI") == "true") { // CI=true is exported by Codemagic
+                storeFile = file(System.getenv("CM_KEYSTORE_PATH") ?: "")
+                storePassword = System.getenv("CM_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("CM_KEY_ALIAS")
+                keyPassword = System.getenv("CM_KEY_PASSWORD")
             } else {
-                keyAlias keystoreProperties['keyAlias']
-                keyPassword keystoreProperties['keyPassword']
-                storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-                storePassword keystoreProperties['storePassword']
+                val keystorePropertiesFile = rootProject.file("key.properties")
+                if (keystorePropertiesFile.exists()) {
+                    val keystoreProperties = java.util.Properties()
+                    keystoreProperties.load(keystorePropertiesFile.inputStream())
+                    keyAlias = keystoreProperties["keyAlias"] as String?
+                    keyPassword = keystoreProperties["keyPassword"] as String?
+                    storeFile = (keystoreProperties["storeFile"] as String?)?.let { file(it) }
+                    storePassword = keystoreProperties["storePassword"] as String?
+                }
             }
         }
     }
