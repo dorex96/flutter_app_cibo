@@ -9,8 +9,7 @@ plugins {
 
 android {
     namespace = "com.tverdohleb.appcibo"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 34
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -26,10 +25,10 @@ android {
         applicationId = "com.tverdohleb.appcibo"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk = 33
+        targetSdk = 34
+        versionCode = 1
+        versionName = "0.1.0"
     }
 
     signingConfigs {
