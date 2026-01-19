@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.tverdohleb.appcibo"
-    compileSdk = 35
+    compileSdk = 36
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -25,8 +25,8 @@ android {
         applicationId = "com.tverdohleb.appcibo"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = 33
-        targetSdk = 35
+        minSdk = 24
+        targetSdk = 36
         versionCode = 3
         versionName = "1.0.0"
     }
