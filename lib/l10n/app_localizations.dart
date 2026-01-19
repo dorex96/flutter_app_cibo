@@ -158,6 +158,24 @@ abstract class AppLocalizations {
   /// **'Salva Contenitore'**
   String get containerDetailSaveButton;
 
+  /// Label showing the portion weight
+  ///
+  /// In it, this message translates to:
+  /// **'Porzione: {portion} g'**
+  String containerPortionWeight(String portion);
+
+  /// Label showing the number of portions
+  ///
+  /// In it, this message translates to:
+  /// **'N. Porzioni: {nrPortion}'**
+  String containerNrPortion(String nrPortion);
+
+  /// Label showing the upload date of the container
+  ///
+  /// In it, this message translates to:
+  /// **'Data Caricamento: {date}'**
+  String containerUploadDate(String date);
+
   /// Message displayed when there is no food in the fridge
   ///
   /// In it, this message translates to:
