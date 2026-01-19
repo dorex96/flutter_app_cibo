@@ -13,12 +13,14 @@ class ContenitoreFrigoWidget extends StatelessWidget {
     required this.pesoPorzione,
     required this.porzioniDisponibili,
     required this.dataInserimento,
+    this.gman,
   });
 
   final String nomeContenitore;
   final double pesoPorzione;
   final int porzioniDisponibili;
   final DateTime dataInserimento;
+  final Function()? gman;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,7 @@ class ContenitoreFrigoWidget extends StatelessWidget {
         '${localizations.containerNrPortion(porzioniDisponibili.toString())}\n'
         '${localizations.containerUploadDate('${dataInserimento.day}/${dataInserimento.month}/${dataInserimento.year}')}',
       ),
+      trailing: IconButton(onPressed: gman, icon: const Icon(Icons.food_bank)),
     );
   }
 }

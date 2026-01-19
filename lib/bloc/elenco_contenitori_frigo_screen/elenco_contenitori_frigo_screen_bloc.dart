@@ -21,6 +21,7 @@ class ElencoContenitoriFrigoScreenBloc
     on<AddContenitoreEvent>(_addContenitore);
     on<EditContenitoreEvent>(_editContenitore);
     on<DeleteContenitoreEvent>(_deleteContenitore);
+    on<GnamPorzioneEvent>(_gnamPorzione);
 
     add(LoadContenitoriEvent());
   }
@@ -73,6 +74,32 @@ class ElencoContenitoriFrigoScreenBloc
   ) async {
     try {
       _contenitoriRepository.delete(event.id);
+      add(LoadContenitoriEvent());
+    } catch (e) {
+      emit(ElencoContenitoriFrigoScreenError(e.toString()));
+    }
+  }
+
+  Future<void> _gnamPorzione(
+    GnamPorzioneEvent event,
+    Emitter<ElencoContenitoriFrigoScreenState> emit,
+  ) async {
+    try {
+      final contenitore = _contenitoriRepository.getById(event.id);
+      if (contenitore != null && (contenitore.porzioni ?? 0) > 0) {
+        final nuovePorzioni = (contenitore.porzioni ?? 0) - 1;
+
+        if (nuovePorzioni == 0) {
+          // Se le porzioni diventano 0, elimina il contenitore
+          _contenitoriRepository.delete(event.id);
+        } else {
+          // Altrimenti aggiorna i valori sottraendo il peso di una porzione
+          contenitore.porzioni = nuovePorzioni;
+          final pesoPorzione = contenitore.pesoPorzione ?? 0;
+          contenitore.pesoCibo = (contenitore.pesoCibo ?? 0) - pesoPorzione;
+          _contenitoriRepository.put(contenitore);
+        }
+      }
       add(LoadContenitoriEvent());
     } catch (e) {
       emit(ElencoContenitoriFrigoScreenError(e.toString()));

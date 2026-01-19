@@ -95,6 +95,9 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
                 nomeContenitore: contenitore.nome ?? 'Senza nome',
                 porzioniDisponibili: contenitore.porzioni ?? 0,
                 pesoPorzione: contenitore.pesoPorzione ?? 0,
+                gman: contenitore.porzioni != null
+                    ? () => _gman(context, contenitore.id)
+                    : null,
               ),
             ),
           );
@@ -116,6 +119,12 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
   _editContenitore(BuildContext context, int id) async {
     context.read<ElencoContenitoriFrigoScreenBloc>().add(
       EditContenitoreEvent(id: id),
+    );
+  }
+
+  _gman(BuildContext context, int id) async {
+    context.read<ElencoContenitoriFrigoScreenBloc>().add(
+      GnamPorzioneEvent(id: id),
     );
   }
 

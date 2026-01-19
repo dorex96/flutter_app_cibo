@@ -18,3 +18,9 @@ class DeleteContenitoreEvent extends ElencoContenitoriFrigoScreenEvent {
 
   final int id;
 }
+
+class GnamPorzioneEvent extends ElencoContenitoriFrigoScreenEvent {
+  GnamPorzioneEvent({required this.id});
+
+  final int id;
+}
