@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/app_localizations.dart';
+
 /// Widget representing a fridge container item
 ///
 /// Displays the container name, available quantity, available portions,
@@ -8,23 +10,26 @@ class ContenitoreFrigoWidget extends StatelessWidget {
   const ContenitoreFrigoWidget({
     super.key,
     required this.nomeContenitore,
-    required this.quantitaDisponibile,
+    required this.pesoPorzione,
     required this.porzioniDisponibili,
     required this.dataInserimento,
   });
 
   final String nomeContenitore;
-  final double quantitaDisponibile;
+  final double pesoPorzione;
   final int porzioniDisponibili;
   final DateTime dataInserimento;
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return ListTile(
       isThreeLine: true,
       title: Text(nomeContenitore),
       subtitle: Text(
-        'Disponibili: $quantitaDisponibile gr\nPorzioni disponibili: $porzioniDisponibili\nData inserimento: ${dataInserimento.day}/${dataInserimento.month}/${dataInserimento.year}',
+        '${localizations.containerPortionWeight(pesoPorzione.toStringAsFixed(2))}\n'
+        '${localizations.containerNrPortion(porzioniDisponibili.toString())}\n'
+        '${localizations.containerUploadDate('${dataInserimento.day}/${dataInserimento.month}/${dataInserimento.year}')}',
       ),
     );
   }

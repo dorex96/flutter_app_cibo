@@ -39,6 +39,21 @@ class AppLocalizationsIt extends AppLocalizations {
   String get containerDetailSaveButton => 'Salva Contenitore';
 
   @override
+  String containerPortionWeight(String portion) {
+    return 'Porzione: $portion g';
+  }
+
+  @override
+  String containerNrPortion(String nrPortion) {
+    return 'N. Porzioni: $nrPortion';
+  }
+
+  @override
+  String containerUploadDate(String date) {
+    return 'Data Caricamento: $date';
+  }
+
+  @override
   String get gen_No_Food => 'Non hai nulla da mangiare 😢';
 
   @override

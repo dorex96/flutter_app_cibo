@@ -39,6 +39,33 @@
     "@containerDetailSaveButton": {
         "description": "Label for the save container button in the container detail page"
     },
+    "containerPortionWeight": "Porzione: {portion} g",
+    "@containerPortionWeight": {
+        "description": "Label showing the portion weight",
+        "placeholders": {
+            "portion": {
+                "type": "String"
+            }
+        }
+    },
+    "containerNrPortion": "N. Porzioni: {nrPortion}",
+    "@containerNrPortion": {
+        "description": "Label showing the number of portions",
+        "placeholders": {
+            "nrPortion": {
+                "type": "String"
+            }
+        }
+    },
+    "containerUploadDate": "Data Caricamento: {date}",
+    "@containerUploadDate": {
+        "description": "Label showing the upload date of the container",
+        "placeholders": {
+            "date": {
+                "type": "String"
+            }
+        }
+    },
     "gen_No_Food": "Non hai nulla da mangiare 😢",
     "@gen_No_Food": {
         "description": "Message displayed when there is no food in the fridge"
