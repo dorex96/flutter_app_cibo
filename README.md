@@ -101,31 +101,17 @@ lib/
 ├── bloc/					 # BLoC (Business Logic)
 |	└── elenco_contenitori_frigo_screen/
 ├── config/                  # Configurazioni dell'app
-│   ├── app_router.dart      # Configurazione routing
-│   └── app_theme.dart       # Configurazione tema
 ├── constants/               # Costanti dell'applicazione
-│   ├── app_constants.dart   # Costanti generali
-│   └── theme_constants.dart # Costanti tema
 ├── cubit/                   # BLoC (Business Logic)
-│   └── theme_cubit/
-│       ├── theme_cubit.dart
-│       └── theme_state.dart
+│   ├── theme_cubit/
+│   └── dettaglio_contenitore_cubit/
 ├── l10n/                    # Localizzazione
-│   ├── app_en.arb
-│   ├── app_it.arb
-│   └── app_localizations.dart
 ├── models/                  # Modelli di dati
-│	└── entities/			 # Entità
-│		└── contenitore_entity.dart
 ├── objectbox/               # File generati automaticamente per objectbox
 ├── repositories/            # Raccoglitori di dati
 ├── screens/                 # Schermate dell'app
-│   ├── elenco_contenitori_frigo_screen.dart
-|	└── dettaglio_contenitore_frigo_screen
 ├── services/                # Funzionalità di servizio
 ├── widgets/                 # Widget riutilizzabili
-|	├── contenitore_frigo_widget.dart
-|	└── input_dettaglio_contenitore_widget.dart
 ├──	theme/                   # File dei temi
 └── main.dart                # Punto di ingresso
 ```
