@@ -92,7 +92,7 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
               onTap: () => _editContenitore(context, contenitore.id),
               child: ContenitoreFrigoWidget(
                 dataInserimento: contenitore.dataCaricamento ?? DateTime.now(),
-                nomeContenitore: contenitore.nome ?? 'Senza nome',
+                nomeContenitore: contenitore.nome ?? appLoc.no_name,
                 porzioniDisponibili: contenitore.porzioni ?? 0,
                 pesoPorzione: contenitore.pesoPorzione ?? 0,
                 gman: contenitore.porzioni != null

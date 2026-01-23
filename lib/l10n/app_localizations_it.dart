@@ -74,4 +74,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get gen_Delete => 'Elimina';
+
+  @override
+  String get no_name => 'Senza Nome';
 }

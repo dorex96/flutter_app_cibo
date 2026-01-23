@@ -99,5 +99,9 @@
     "gen_Delete": "Delete",
     "@gen_Delete": {
         "description": "Delete button label"
+    },
+    "no_name": "No Name",
+    "@no_name": {
+        "description": "Placeholder for items without a name"
     }
 }

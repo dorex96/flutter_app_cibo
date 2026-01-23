@@ -211,6 +211,12 @@ abstract class AppLocalizations {
   /// In it, this message translates to:
   /// **'Elimina'**
   String get gen_Delete;
+
+  /// Placeholder for items without a name
+  ///
+  /// In it, this message translates to:
+  /// **'Senza Nome'**
+  String get no_name;
 }
 
 class _AppLocalizationsDelegate
