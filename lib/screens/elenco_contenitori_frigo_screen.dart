@@ -18,7 +18,15 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final appLoc = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: Text(appLoc.containerListPageTitle)),
+      appBar: AppBar(
+        title: Text(appLoc.containerListPageTitle),
+        actions: [
+          IconButton(
+            onPressed: () => _openSettings(context),
+            icon: Icon(Icons.settings),
+          ),
+        ],
+      ),
       body:
           BlocConsumer<
             ElencoContenitoriFrigoScreenBloc,
@@ -96,7 +104,7 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
                 porzioniDisponibili: contenitore.porzioni ?? 0,
                 pesoPorzione: contenitore.pesoPorzione ?? 0,
                 gman: contenitore.porzioni != null
-                    ? () => _gman(context, contenitore.id)
+                    ? () => _gnam(context, contenitore.id)
                     : null,
               ),
             ),
@@ -112,6 +120,10 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
     return Center(child: CircularProgressIndicator());
   }
 
+  _openSettings(BuildContext context) {
+    context.push('/impostazioni');
+  }
+
   _addNewContenitore(BuildContext context) async {
     context.read<ElencoContenitoriFrigoScreenBloc>().add(AddContenitoreEvent());
   }
@@ -122,7 +134,7 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
     );
   }
 
-  _gman(BuildContext context, int id) async {
+  _gnam(BuildContext context, int id) async {
     context.read<ElencoContenitoriFrigoScreenBloc>().add(
       GnamPorzioneEvent(id: id),
     );
