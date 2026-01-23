@@ -40,7 +40,7 @@ Quante volte hai preparato più porzioni per i prossimi giorni e poi, davanti al
 - 🔁 Aggiorna il peso totale nel tempo (per essere super precisi)
 - 📴 Funziona completamente offline
 - 🎨 Supporto tema chiaro/scuro
-- 🌐 Localizzazione multi-lingua (Italiano, English)
+- 🌐 Localizzazione multi-lingua (Italiano, English, Español, Français, Deutsch, Svenska)
 - 🧑‍🍳 Interfaccia semplice e pensata per uso quotidiano
 
 ---
@@ -186,7 +186,7 @@ No: funziona interamente offline.
 No: tutto rimane sul dispositivo.
 
 **È solo in italiano?**
-Per ora italiano e inglese.
+Assolutamente no, l'applicazione è stata tradotta in: inglese, tedesco, spagnolo, francese e svedese.
 
 ---
 

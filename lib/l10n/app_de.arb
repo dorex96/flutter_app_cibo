@@ -1,0 +1,107 @@
+{
+    "containerListPageTitle": "Behälter im Kühlschrank",
+    "@containerListPageTitle": {
+        "description": "The title for the container list page"
+    },
+    "containerDetailNewTitle": "Neuer Behälter",
+    "@containerDetailNewTitle": {
+        "description": "The title for the new container detail page"
+    },
+    "containerDetailEditTitle": "Behälter bearbeiten",
+    "@containerDetailEditTitle": {
+        "description": "The title for the edit container detail page"
+    },
+    "containerDetailNameLabel": "Behältername",
+    "@containerDetailNameLabel": {
+        "description": "Label for the container name field in the container detail page"
+    },
+    "containerDetailContainerWeightLabel": "Behältergewicht (g)",
+    "@containerDetailContainerWeightLabel": {
+        "description": "Label for the container weight field in the container detail page"
+    },
+    "containerDetailTotalWeightLabel": "Gesamtgewicht (g)",
+    "@containerDetailTotalWeightLabel": {
+        "description": "Label for the total weight field (container + food) in the container detail page"
+    },
+    "containerDetailFoodWeightLabel": "Lebensmittelgewicht (g)",
+    "@containerDetailFoodWeightLabel": {
+        "description": "Label for the food weight field in the container detail page"
+    },
+    "containerDetailPortionLabel": "Portion",
+    "@containerDetailPortionLabel": {
+        "description": "Label for the portion field in the container detail page"
+    },
+    "containerDetailPortionWeightLabel": "Portionsgewicht (g)",
+    "@containerDetailPortionWeightLabel": {
+        "description": "Label for the portion weight field in the container detail page"
+    },
+    "containerDetailSaveButton": "Behälter speichern",
+    "@containerDetailSaveButton": {
+        "description": "Label for the save container button in the container detail page"
+    },
+    "containerPortionWeight": "Portion: {portion} g",
+    "@containerPortionWeight": {
+        "description": "Label showing the portion weight",
+        "placeholders": {
+            "portion": {
+                "type": "String"
+            }
+        }
+    },
+    "containerNrPortion": "Anzahl Portionen: {nrPortion}",
+    "@containerNrPortion": {
+        "description": "Label showing the number of portions",
+        "placeholders": {
+            "nrPortion": {
+                "type": "String"
+            }
+        }
+    },
+    "containerUploadDate": "Uploaddatum: {date}",
+    "@containerUploadDate": {
+        "description": "Label showing the upload date of the container",
+        "placeholders": {
+            "date": {
+                "type": "String"
+            }
+        }
+    },
+    "gen_No_Food": "Du hast nichts zu essen 😢",
+    "@gen_No_Food": {
+        "description": "Message displayed when there is no food in the fridge"
+    },
+    "gen_Gen_Error": "Fehler: {error}",
+    "@gen_Gen_Error": {
+        "description": "Generic error message with error details",
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    "gen_Confirm_Delete_Title": "Löschung bestätigen",
+    "@gen_Confirm_Delete_Title": {
+        "description": "Title for the delete confirmation dialog"
+    },
+    "gen_Confirm_Delete_Message": "Möchtest du \"{name}\" löschen?",
+    "@gen_Confirm_Delete_Message": {
+        "description": "Message for the delete confirmation dialog",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "gen_Cancel": "Abbrechen",
+    "@gen_Cancel": {
+        "description": "Cancel button label"
+    },
+    "gen_Delete": "Löschen",
+    "@gen_Delete": {
+        "description": "Delete button label"
+    },
+    "no_name": "Ohne Namen",
+    "@no_name": {
+        "description": "Placeholder for items without a name"
+    }
+}
