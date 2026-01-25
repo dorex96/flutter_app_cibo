@@ -115,5 +115,77 @@
     "settings_help": "Ayuda",
     "@settings_help": {
         "description": "Label for the help option in the settings screen"
+    },
+    "help_title": "Ayuda",
+    "@help_title": {
+        "description": "Title for the help screen"
+    },
+    "help_intro": "Veamos cómo utilizar Cibo de la mejor manera.",
+    "@help_intro": {
+        "description": "Introduction text for the help screen"
+    },
+    "help_step1": "Empezamos introduciendo el nombre del plato",
+    "@help_step1": {
+        "description": "Step 1 instruction"
+    },
+    "help_step2": "e inmediatamente podemos introducir el peso del contenedor",
+    "@help_step2": {
+        "description": "Step 2 instruction"
+    },
+    "help_step2_note": ", con la tapa si corresponde.",
+    "@help_step2_note": {
+        "description": "Note for step 2"
+    },
+    "help_step3": "En este punto, si aún no tenemos todo listo, podemos guardar",
+    "@help_step3": {
+        "description": "Step 3 instruction"
+    },
+    "help_step3_note": "y continuar una vez que hayamos preparado el plato.",
+    "@help_step3_note": {
+        "description": "Note for step 3"
+    },
+    "help_step4": "Una vez que todo esté listo, llenamos el contenedor y lo pesamos, con la tapa si corresponde, e introducimos su peso total",
+    "@help_step4": {
+        "description": "Step 4 instruction"
+    },
+    "help_step5": "veremos que",
+    "@help_step5": {
+        "description": "Step 5 instruction part 1"
+    },
+    "help_step5_note": "se calcula automáticamente y al cambiar",
+    "@help_step5_note": {
+        "description": "Step 5 instruction part 2"
+    },
+    "help_step5_end": "se actualizará en consecuencia.",
+    "@help_step5_end": {
+        "description": "Step 5 instruction part 3"
+    },
+    "help_step6": "En este punto podemos elegir introducir el número de porciones",
+    "@help_step6": {
+        "description": "Step 6 instruction part 1"
+    },
+    "help_step6_note": "o el peso de una sola porción",
+    "@help_step6_note": {
+        "description": "Step 6 instruction part 2"
+    },
+    "help_step6_end": ", al introducir una, la otra se actualizará automáticamente.",
+    "@help_step6_end": {
+        "description": "Step 6 instruction part 3"
+    },
+    "help_step7": "Ahora podemos guardar todo usando el botón guardar",
+    "@help_step7": {
+        "description": "Step 7 instruction"
+    },
+    "help_gnam": "Cuando comemos, en lugar de cambiar los valores manualmente podemos usar el botón Gnam",
+    "@help_gnam": {
+        "description": "Gnam button instruction"
+    },
+    "help_gnam_note": "que eliminará una porción del contenedor y actualizará todos los datos.",
+    "@help_gnam_note": {
+        "description": "Gnam button note"
+    },
+    "help_thanks": "Gracias por descargar Cibo.",
+    "@help_thanks": {
+        "description": "Thank you message"
     }
 }

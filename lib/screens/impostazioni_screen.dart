@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
 import '../cubit/theme_cubit/theme_cubit.dart';
@@ -44,9 +45,7 @@ class ImpostazioniScreen extends StatelessWidget {
                 ListTile(
                   leading: const Icon(Icons.help_outline),
                   title: Text(localizations.settings_help),
-                  onTap: () {
-                    // Implement help action
-                  },
+                  onTap: () => _handleHelp(context),
                   trailing: Icon(Icons.chevron_right, size: 24.w),
                 ),
               ],
@@ -69,5 +68,9 @@ class ImpostazioniScreen extends StatelessWidget {
   _toggleTheme(BuildContext context) {
     final themeCubit = context.read<ThemeCubit>();
     themeCubit.toggleTheme();
+  }
+
+  _handleHelp(BuildContext context) {
+    context.push('/impostazioni/aiuto');
   }
 }

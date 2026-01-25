@@ -243,6 +243,114 @@ abstract class AppLocalizations {
   /// In it, this message translates to:
   /// **'Aiuto'**
   String get settings_help;
+
+  /// Title for the help screen
+  ///
+  /// In it, this message translates to:
+  /// **'Aiuto'**
+  String get help_title;
+
+  /// Introduction text for the help screen
+  ///
+  /// In it, this message translates to:
+  /// **'Vediamo come utilizzare al meglio Cibo.'**
+  String get help_intro;
+
+  /// Step 1 instruction
+  ///
+  /// In it, this message translates to:
+  /// **'Iniziamo inserendo il nome della pietanza'**
+  String get help_step1;
+
+  /// Step 2 instruction
+  ///
+  /// In it, this message translates to:
+  /// **'e subito possiamo inserire il peso del contenitore'**
+  String get help_step2;
+
+  /// Note for step 2
+  ///
+  /// In it, this message translates to:
+  /// **', con il coperchio se previsto.'**
+  String get help_step2_note;
+
+  /// Step 3 instruction
+  ///
+  /// In it, this message translates to:
+  /// **'A questo punto se non abbiamo ancora tutto pronto possiamo salvare'**
+  String get help_step3;
+
+  /// Note for step 3
+  ///
+  /// In it, this message translates to:
+  /// **'e proseguire una volta che abbiamo preparato la pietanza.'**
+  String get help_step3_note;
+
+  /// Step 4 instruction
+  ///
+  /// In it, this message translates to:
+  /// **'Una volta che abbiamo tutto pronto, riempiamo il contenitore e lo pesiamo, con coperchio se previsto, e inseriamo il suo peso totale'**
+  String get help_step4;
+
+  /// Step 5 instruction part 1
+  ///
+  /// In it, this message translates to:
+  /// **'vedremo che'**
+  String get help_step5;
+
+  /// Step 5 instruction part 2
+  ///
+  /// In it, this message translates to:
+  /// **'si valorizza automaticamente e variandolo'**
+  String get help_step5_note;
+
+  /// Step 5 instruction part 3
+  ///
+  /// In it, this message translates to:
+  /// **'si aggiornerà di conseguenza.'**
+  String get help_step5_end;
+
+  /// Step 6 instruction part 1
+  ///
+  /// In it, this message translates to:
+  /// **'A questo punto possiamo scegliere se inserire il nr di porzioni'**
+  String get help_step6;
+
+  /// Step 6 instruction part 2
+  ///
+  /// In it, this message translates to:
+  /// **'o quant\'è il peso di una singola porzione'**
+  String get help_step6_note;
+
+  /// Step 6 instruction part 3
+  ///
+  /// In it, this message translates to:
+  /// **', inserendone una l\'altra si aggiornerà di conseguenza.'**
+  String get help_step6_end;
+
+  /// Step 7 instruction
+  ///
+  /// In it, this message translates to:
+  /// **'Possiamo ora salvare tutto usando il tasto salva'**
+  String get help_step7;
+
+  /// Gnam button instruction
+  ///
+  /// In it, this message translates to:
+  /// **'Quando consumiamo il nostro pasto, anziché modificare i valori a mano possiamo utilizzare il tasto Gnam'**
+  String get help_gnam;
+
+  /// Gnam button note
+  ///
+  /// In it, this message translates to:
+  /// **'che andrà a rimuovere una porzione dal contenitore e aggiornerà tutti i dati.'**
+  String get help_gnam_note;
+
+  /// Thank you message
+  ///
+  /// In it, this message translates to:
+  /// **'Grazie per aver scaricato Cibo.'**
+  String get help_thanks;
 }
 
 class _AppLocalizationsDelegate

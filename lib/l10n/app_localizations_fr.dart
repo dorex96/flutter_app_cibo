@@ -86,4 +86,67 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get settings_help => 'Aide';
+
+  @override
+  String get help_title => 'Aide';
+
+  @override
+  String get help_intro => 'Voyons comment utiliser au mieux Cibo.';
+
+  @override
+  String get help_step1 => 'Commençons par entrer le nom du plat';
+
+  @override
+  String get help_step2 =>
+      'et immédiatement nous pouvons entrer le poids du conteneur';
+
+  @override
+  String get help_step2_note => ', avec le couvercle si applicable.';
+
+  @override
+  String get help_step3 =>
+      'À ce stade, si nous n\'avons pas encore tout prêt, nous pouvons sauvegarder';
+
+  @override
+  String get help_step3_note =>
+      'et continuer une fois que nous avons préparé le plat.';
+
+  @override
+  String get help_step4 =>
+      'Une fois que tout est prêt, remplissons le conteneur et pesons-le, avec le couvercle si applicable, et entrons son poids total';
+
+  @override
+  String get help_step5 => 'nous verrons que';
+
+  @override
+  String get help_step5_note => 'est calculé automatiquement et en modifiant';
+
+  @override
+  String get help_step5_end => 'il sera mis à jour en conséquence.';
+
+  @override
+  String get help_step6 =>
+      'À ce stade, nous pouvons choisir d\'entrer le nombre de portions';
+
+  @override
+  String get help_step6_note => 'ou le poids d\'une seule portion';
+
+  @override
+  String get help_step6_end =>
+      ', en entrant l\'une, l\'autre se mettra à jour automatiquement.';
+
+  @override
+  String get help_step7 =>
+      'Nous pouvons maintenant tout sauvegarder avec le bouton enregistrer';
+
+  @override
+  String get help_gnam =>
+      'Quand nous mangeons, au lieu de modifier les valeurs manuellement, nous pouvons utiliser le bouton Gnam';
+
+  @override
+  String get help_gnam_note =>
+      'qui supprimera une portion du conteneur et mettra à jour toutes les données.';
+
+  @override
+  String get help_thanks => 'Merci d\'avoir téléchargé Cibo.';
 }
