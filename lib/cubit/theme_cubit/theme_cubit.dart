@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import '../../constants/theme_constants.dart';
@@ -14,9 +16,18 @@ class ThemeCubit extends Cubit<ThemeState> {
 
   /// Returns the current theme mode from the state
   ///
-  /// Returns [ThemeMode.system] if state is not [ThemeReady]
-  ThemeMode get currentMode =>
-      state is ThemeReady ? (state as ThemeReady).themeMode : defaultThemeMode;
+  /// Always returns [ThemeMode.light] or [ThemeMode.dark].
+  /// If state is [ThemeMode.system], returns the actual system brightness.
+  ThemeMode get currentMode {
+    final mode = state is ThemeReady
+        ? (state as ThemeReady).themeMode
+        : defaultThemeMode;
+    if (mode == ThemeMode.system) {
+      final brightness = PlatformDispatcher.instance.platformBrightness;
+      return brightness == Brightness.dark ? ThemeMode.dark : ThemeMode.light;
+    }
+    return mode;
+  }
 
   /// Sets the theme mode to the specified [mode]
   ///

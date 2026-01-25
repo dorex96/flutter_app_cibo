@@ -77,4 +77,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get no_name => 'No Name';
+
+  @override
+  String get settings_title => 'Settings';
+
+  @override
+  String get settings_theme => 'Theme';
+
+  @override
+  String get settings_help => 'Help';
 }

@@ -103,5 +103,17 @@
     "no_name": "Utan namn",
     "@no_name": {
         "description": "Placeholder for items without a name"
+    },
+    "settings_title": "Inställningar",
+    "@settings_title": {
+        "description": "Title for the settings screen"
+    },
+    "settings_theme": "Tema",
+    "@settings_theme": {
+        "description": "Label for the theme setting in the settings screen"
+    },
+    "settings_help": "Hjälp",
+    "@settings_help": {
+        "description": "Label for the help option in the settings screen"
     }
 }

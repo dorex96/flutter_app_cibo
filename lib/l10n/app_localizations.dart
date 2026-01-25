@@ -225,6 +225,24 @@ abstract class AppLocalizations {
   /// In it, this message translates to:
   /// **'Senza Nome'**
   String get no_name;
+
+  /// Title for the settings screen
+  ///
+  /// In it, this message translates to:
+  /// **'Impostazioni'**
+  String get settings_title;
+
+  /// Label for the theme setting in the settings screen
+  ///
+  /// In it, this message translates to:
+  /// **'Tema'**
+  String get settings_theme;
+
+  /// Label for the help option in the settings screen
+  ///
+  /// In it, this message translates to:
+  /// **'Aiuto'**
+  String get settings_help;
 }
 
 class _AppLocalizationsDelegate

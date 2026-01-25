@@ -77,4 +77,13 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get no_name => 'Utan namn';
+
+  @override
+  String get settings_title => 'Inställningar';
+
+  @override
+  String get settings_theme => 'Tema';
+
+  @override
+  String get settings_help => 'Hjälp';
 }

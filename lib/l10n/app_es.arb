@@ -103,5 +103,17 @@
     "no_name": "Sin Nombre",
     "@no_name": {
         "description": "Placeholder for items without a name"
+    },
+    "settings_title": "Configuración",
+    "@settings_title": {
+        "description": "Title for the settings screen"
+    },
+    "settings_theme": "Tema",
+    "@settings_theme": {
+        "description": "Label for the theme setting in the settings screen"
+    },
+    "settings_help": "Ayuda",
+    "@settings_help": {
+        "description": "Label for the help option in the settings screen"
     }
 }
