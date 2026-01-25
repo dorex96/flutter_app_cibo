@@ -170,6 +170,7 @@ flutter run
 - ✅ v1.0.1:
   - Pagina delle impostazioni
   - Pagina aiuto
+  - Traduzione in: Francese, Spagonolo, Tedesco e Svedese
   - Fix a bug minori
 - ✅ v1.0.0:
   - Inserimento e rimozione di contenitori
