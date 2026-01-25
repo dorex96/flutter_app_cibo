@@ -77,4 +77,74 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get no_name => 'Senza Nome';
+
+  @override
+  String get settings_title => 'Impostazioni';
+
+  @override
+  String get settings_theme => 'Tema';
+
+  @override
+  String get settings_help => 'Aiuto';
+
+  @override
+  String get help_title => 'Aiuto';
+
+  @override
+  String get help_intro => 'Vediamo come utilizzare al meglio Cibo.';
+
+  @override
+  String get help_step1 => 'Iniziamo inserendo il nome della pietanza';
+
+  @override
+  String get help_step2 => 'e subito possiamo inserire il peso del contenitore';
+
+  @override
+  String get help_step2_note => ', con il coperchio se previsto.';
+
+  @override
+  String get help_step3 =>
+      'A questo punto se non abbiamo ancora tutto pronto possiamo salvare';
+
+  @override
+  String get help_step3_note =>
+      'e proseguire una volta che abbiamo preparato la pietanza.';
+
+  @override
+  String get help_step4 =>
+      'Una volta che abbiamo tutto pronto, riempiamo il contenitore e lo pesiamo, con coperchio se previsto, e inseriamo il suo peso totale';
+
+  @override
+  String get help_step5 => 'vedremo che';
+
+  @override
+  String get help_step5_note => 'si valorizza automaticamente e variandolo';
+
+  @override
+  String get help_step5_end => 'si aggiornerà di conseguenza.';
+
+  @override
+  String get help_step6 =>
+      'A questo punto possiamo scegliere se inserire il nr di porzioni';
+
+  @override
+  String get help_step6_note => 'o quant\'è il peso di una singola porzione';
+
+  @override
+  String get help_step6_end =>
+      ', inserendone una l\'altra si aggiornerà di conseguenza.';
+
+  @override
+  String get help_step7 => 'Possiamo ora salvare tutto usando il tasto salva';
+
+  @override
+  String get help_gnam =>
+      'Quando consumiamo il nostro pasto, anziché modificare i valori a mano possiamo utilizzare il tasto Gnam';
+
+  @override
+  String get help_gnam_note =>
+      'che andrà a rimuovere una porzione dal contenitore e aggiornerà tutti i dati.';
+
+  @override
+  String get help_thanks => 'Grazie per aver scaricato Cibo.';
 }

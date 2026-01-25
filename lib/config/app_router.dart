@@ -6,6 +6,9 @@ import 'package:go_router/go_router.dart';
 
 import '../screens/elenco_contenitori_frigo_screen.dart';
 import '../screens/dettaglio_contenitore_frigo_screen.dart';
+import '../screens/impostazioni_screen.dart';
+import '../screens/aiuto_screen.dart';
+
 import '../bloc/elenco_contenitori_frigo_screen/elenco_contenitori_frigo_screen_bloc.dart';
 
 /// Application router configuration
@@ -32,6 +35,18 @@ final appRouter = GoRouter(
           idContenitore: idContenitore,
           isNew: isNew,
         );
+      },
+    ),
+    GoRoute(
+      path: '/impostazioni',
+      builder: (context, state) {
+        return const ImpostazioniScreen();
+      },
+    ),
+    GoRoute(
+      path: '/impostazioni/aiuto',
+      builder: (context, state) {
+        return const AiutoScreen();
       },
     ),
   ],

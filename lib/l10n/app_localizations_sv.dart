@@ -77,4 +77,71 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get no_name => 'Utan namn';
+
+  @override
+  String get settings_title => 'Inställningar';
+
+  @override
+  String get settings_theme => 'Tema';
+
+  @override
+  String get settings_help => 'Hjälp';
+
+  @override
+  String get help_title => 'Hjälp';
+
+  @override
+  String get help_intro => 'Låt oss se hur man använder Cibo på bästa sätt.';
+
+  @override
+  String get help_step1 => 'Börja med att ange namnet på maträtten';
+
+  @override
+  String get help_step2 => 'och direkt kan vi ange vikten på behållaren';
+
+  @override
+  String get help_step2_note => ', med locket om tillämpligt.';
+
+  @override
+  String get help_step3 => 'Om vi inte har allt klart än kan vi spara';
+
+  @override
+  String get help_step3_note => 'och fortsätta när vi har förberett maträtten.';
+
+  @override
+  String get help_step4 =>
+      'När allt är klart, fyll behållaren och väg den, med locket om tillämpligt, och ange dess totalvikt';
+
+  @override
+  String get help_step5 => 'vi kommer att se att';
+
+  @override
+  String get help_step5_note => 'beräknas automatiskt och genom att ändra';
+
+  @override
+  String get help_step5_end => 'uppdateras det därefter.';
+
+  @override
+  String get help_step6 => 'Nu kan vi välja att ange antalet portioner';
+
+  @override
+  String get help_step6_note => 'eller vikten på en enskild portion';
+
+  @override
+  String get help_step6_end =>
+      ', att ange en uppdaterar automatiskt den andra.';
+
+  @override
+  String get help_step7 => 'Vi kan nu spara allt med sparaknappen';
+
+  @override
+  String get help_gnam =>
+      'När vi äter, istället för att ändra värdena manuellt kan vi använda Gnam-knappen';
+
+  @override
+  String get help_gnam_note =>
+      'som tar bort en portion från behållaren och uppdaterar all data.';
+
+  @override
+  String get help_thanks => 'Tack för att du laddade ner Cibo.';
 }

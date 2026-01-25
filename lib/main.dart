@@ -16,10 +16,14 @@ import 'services/objectbox.dart';
 /// Global instance of ObjectBox for database operations
 late ObjectBox objectBox;
 
+/// Global instance of ThemeCubit
+late ThemeCubit themeCubit;
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   objectBox = await ObjectBox.create();
+  themeCubit = await ThemeCubit.create();
 
   runApp(const MainApp());
 }
@@ -35,8 +39,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: appDesignSize,
-      builder: (context, child) => BlocProvider(
-        create: (_) => ThemeCubit(),
+      builder: (context, child) => BlocProvider.value(
+        value: themeCubit,
         child: BlocBuilder<ThemeCubit, ThemeState>(
           builder: (_, state) => switch (state) {
             ThemeReady(themeMode: final themeMode) => MaterialApp.router(

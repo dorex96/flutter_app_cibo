@@ -103,5 +103,89 @@
     "no_name": "Utan namn",
     "@no_name": {
         "description": "Placeholder for items without a name"
+    },
+    "settings_title": "Inställningar",
+    "@settings_title": {
+        "description": "Title for the settings screen"
+    },
+    "settings_theme": "Tema",
+    "@settings_theme": {
+        "description": "Label for the theme setting in the settings screen"
+    },
+    "settings_help": "Hjälp",
+    "@settings_help": {
+        "description": "Label for the help option in the settings screen"
+    },
+    "help_title": "Hjälp",
+    "@help_title": {
+        "description": "Title for the help screen"
+    },
+    "help_intro": "Låt oss se hur man använder Cibo på bästa sätt.",
+    "@help_intro": {
+        "description": "Introduction text for the help screen"
+    },
+    "help_step1": "Börja med att ange namnet på maträtten",
+    "@help_step1": {
+        "description": "Step 1 instruction"
+    },
+    "help_step2": "och direkt kan vi ange vikten på behållaren",
+    "@help_step2": {
+        "description": "Step 2 instruction"
+    },
+    "help_step2_note": ", med locket om tillämpligt.",
+    "@help_step2_note": {
+        "description": "Note for step 2"
+    },
+    "help_step3": "Om vi inte har allt klart än kan vi spara",
+    "@help_step3": {
+        "description": "Step 3 instruction"
+    },
+    "help_step3_note": "och fortsätta när vi har förberett maträtten.",
+    "@help_step3_note": {
+        "description": "Note for step 3"
+    },
+    "help_step4": "När allt är klart, fyll behållaren och väg den, med locket om tillämpligt, och ange dess totalvikt",
+    "@help_step4": {
+        "description": "Step 4 instruction"
+    },
+    "help_step5": "vi kommer att se att",
+    "@help_step5": {
+        "description": "Step 5 instruction part 1"
+    },
+    "help_step5_note": "beräknas automatiskt och genom att ändra",
+    "@help_step5_note": {
+        "description": "Step 5 instruction part 2"
+    },
+    "help_step5_end": "uppdateras det därefter.",
+    "@help_step5_end": {
+        "description": "Step 5 instruction part 3"
+    },
+    "help_step6": "Nu kan vi välja att ange antalet portioner",
+    "@help_step6": {
+        "description": "Step 6 instruction part 1"
+    },
+    "help_step6_note": "eller vikten på en enskild portion",
+    "@help_step6_note": {
+        "description": "Step 6 instruction part 2"
+    },
+    "help_step6_end": ", att ange en uppdaterar automatiskt den andra.",
+    "@help_step6_end": {
+        "description": "Step 6 instruction part 3"
+    },
+    "help_step7": "Vi kan nu spara allt med sparaknappen",
+    "@help_step7": {
+        "description": "Step 7 instruction"
+    },
+    "help_gnam": "När vi äter, istället för att ändra värdena manuellt kan vi använda Gnam-knappen",
+    "@help_gnam": {
+        "description": "Gnam button instruction"
+    },
+    "help_gnam_note": "som tar bort en portion från behållaren och uppdaterar all data.",
+    "@help_gnam_note": {
+        "description": "Gnam button note"
+    },
+    "help_thanks": "Tack för att du laddade ner Cibo.",
+    "@help_thanks": {
+        "description": "Thank you message"
     }
 }

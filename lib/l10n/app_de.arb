@@ -103,5 +103,89 @@
     "no_name": "Ohne Namen",
     "@no_name": {
         "description": "Placeholder for items without a name"
+    },
+    "settings_title": "Einstellungen",
+    "@settings_title": {
+        "description": "Title for the settings screen"
+    },
+    "settings_theme": "Design",
+    "@settings_theme": {
+        "description": "Label for the theme setting in the settings screen"
+    },
+    "settings_help": "Hilfe",
+    "@settings_help": {
+        "description": "Label for the help option in the settings screen"
+    },
+    "help_title": "Hilfe",
+    "@help_title": {
+        "description": "Title for the help screen"
+    },
+    "help_intro": "Sehen wir uns an, wie man Cibo am besten nutzt.",
+    "@help_intro": {
+        "description": "Introduction text for the help screen"
+    },
+    "help_step1": "Beginnen wir mit der Eingabe des Gerichtsnamens",
+    "@help_step1": {
+        "description": "Step 1 instruction"
+    },
+    "help_step2": "und sofort können wir das Gewicht des Behälters eingeben",
+    "@help_step2": {
+        "description": "Step 2 instruction"
+    },
+    "help_step2_note": ", mit Deckel falls vorhanden.",
+    "@help_step2_note": {
+        "description": "Note for step 2"
+    },
+    "help_step3": "Wenn wir noch nicht alles bereit haben, können wir speichern",
+    "@help_step3": {
+        "description": "Step 3 instruction"
+    },
+    "help_step3_note": "und fortfahren, sobald wir das Gericht zubereitet haben.",
+    "@help_step3_note": {
+        "description": "Note for step 3"
+    },
+    "help_step4": "Sobald alles bereit ist, füllen wir den Behälter und wiegen ihn, mit Deckel falls vorhanden, und geben sein Gesamtgewicht ein",
+    "@help_step4": {
+        "description": "Step 4 instruction"
+    },
+    "help_step5": "wir werden sehen, dass",
+    "@help_step5": {
+        "description": "Step 5 instruction part 1"
+    },
+    "help_step5_note": "automatisch berechnet wird und bei Änderung von",
+    "@help_step5_note": {
+        "description": "Step 5 instruction part 2"
+    },
+    "help_step5_end": "entsprechend aktualisiert wird.",
+    "@help_step5_end": {
+        "description": "Step 5 instruction part 3"
+    },
+    "help_step6": "Jetzt können wir wählen, ob wir die Anzahl der Portionen eingeben",
+    "@help_step6": {
+        "description": "Step 6 instruction part 1"
+    },
+    "help_step6_note": "oder das Gewicht einer einzelnen Portion",
+    "@help_step6_note": {
+        "description": "Step 6 instruction part 2"
+    },
+    "help_step6_end": ", die Eingabe einer aktualisiert automatisch die andere.",
+    "@help_step6_end": {
+        "description": "Step 6 instruction part 3"
+    },
+    "help_step7": "Wir können jetzt alles mit der Speichern-Taste speichern",
+    "@help_step7": {
+        "description": "Step 7 instruction"
+    },
+    "help_gnam": "Wenn wir essen, können wir anstatt die Werte manuell zu ändern die Gnam-Taste verwenden",
+    "@help_gnam": {
+        "description": "Gnam button instruction"
+    },
+    "help_gnam_note": "die eine Portion aus dem Behälter entfernt und alle Daten aktualisiert.",
+    "@help_gnam_note": {
+        "description": "Gnam button note"
+    },
+    "help_thanks": "Danke, dass du Cibo heruntergeladen hast.",
+    "@help_thanks": {
+        "description": "Thank you message"
     }
 }

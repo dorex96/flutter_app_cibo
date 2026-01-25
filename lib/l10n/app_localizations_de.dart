@@ -77,4 +77,77 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get no_name => 'Ohne Namen';
+
+  @override
+  String get settings_title => 'Einstellungen';
+
+  @override
+  String get settings_theme => 'Design';
+
+  @override
+  String get settings_help => 'Hilfe';
+
+  @override
+  String get help_title => 'Hilfe';
+
+  @override
+  String get help_intro => 'Sehen wir uns an, wie man Cibo am besten nutzt.';
+
+  @override
+  String get help_step1 => 'Beginnen wir mit der Eingabe des Gerichtsnamens';
+
+  @override
+  String get help_step2 =>
+      'und sofort können wir das Gewicht des Behälters eingeben';
+
+  @override
+  String get help_step2_note => ', mit Deckel falls vorhanden.';
+
+  @override
+  String get help_step3 =>
+      'Wenn wir noch nicht alles bereit haben, können wir speichern';
+
+  @override
+  String get help_step3_note =>
+      'und fortfahren, sobald wir das Gericht zubereitet haben.';
+
+  @override
+  String get help_step4 =>
+      'Sobald alles bereit ist, füllen wir den Behälter und wiegen ihn, mit Deckel falls vorhanden, und geben sein Gesamtgewicht ein';
+
+  @override
+  String get help_step5 => 'wir werden sehen, dass';
+
+  @override
+  String get help_step5_note =>
+      'automatisch berechnet wird und bei Änderung von';
+
+  @override
+  String get help_step5_end => 'entsprechend aktualisiert wird.';
+
+  @override
+  String get help_step6 =>
+      'Jetzt können wir wählen, ob wir die Anzahl der Portionen eingeben';
+
+  @override
+  String get help_step6_note => 'oder das Gewicht einer einzelnen Portion';
+
+  @override
+  String get help_step6_end =>
+      ', die Eingabe einer aktualisiert automatisch die andere.';
+
+  @override
+  String get help_step7 =>
+      'Wir können jetzt alles mit der Speichern-Taste speichern';
+
+  @override
+  String get help_gnam =>
+      'Wenn wir essen, können wir anstatt die Werte manuell zu ändern die Gnam-Taste verwenden';
+
+  @override
+  String get help_gnam_note =>
+      'die eine Portion aus dem Behälter entfernt und alle Daten aktualisiert.';
+
+  @override
+  String get help_thanks => 'Danke, dass du Cibo heruntergeladen hast.';
 }
