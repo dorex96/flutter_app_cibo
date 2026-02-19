@@ -69,7 +69,9 @@ class ContenitoreFrigoWidget extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 2.h),
-                  Row(
+                  Wrap(
+                    spacing: 12.w,
+                    runSpacing: 2.h,
                     children: [
                       Text(
                         localizations.containerNrPortion(
@@ -80,7 +82,6 @@ class ContenitoreFrigoWidget extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox(width: 12.w),
                       Text(
                         localizations.containerUploadDate(
                           '${dataInserimento.day}/${dataInserimento.month}/${dataInserimento.year}',
@@ -96,14 +97,12 @@ class ContenitoreFrigoWidget extends StatelessWidget {
             ),
             IconButton(
               onPressed: gman,
-              icon: Icon(
-                Icons.restaurant,
-                color: colorScheme.secondary,
-              ),
+              icon: Icon(Icons.restaurant, color: colorScheme.secondary),
               tooltip: 'Gnam!',
               style: IconButton.styleFrom(
-                backgroundColor:
-                    colorScheme.secondaryContainer.withValues(alpha: 0.5),
+                backgroundColor: colorScheme.secondaryContainer.withValues(
+                  alpha: 0.5,
+                ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
