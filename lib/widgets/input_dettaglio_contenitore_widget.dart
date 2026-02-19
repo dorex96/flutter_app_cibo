@@ -26,18 +26,28 @@ class _InputDettaglioContenitoreWidgetState
     extends State<InputDettaglioContenitoreWidget> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(widget.label),
-        TextField(
-          key: widget.key,
-          controller: widget.controller,
-          keyboardType: widget.keyboardType,
-        ),
-        SizedBox(height: 20.h),
-      ],
+    final theme = Theme.of(context);
+    return Padding(
+      padding: EdgeInsets.only(bottom: 16.h),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            widget.label,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              fontWeight: FontWeight.w500,
+              color: theme.colorScheme.onSurface.withValues(alpha: 0.8),
+            ),
+          ),
+          SizedBox(height: 8.h),
+          TextField(
+            key: widget.key,
+            controller: widget.controller,
+            keyboardType: widget.keyboardType,
+          ),
+        ],
+      ),
     );
   }
 }

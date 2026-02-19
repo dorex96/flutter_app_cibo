@@ -60,10 +60,9 @@ class DettaglioContenitoreFrigoScreen extends StatelessWidget {
                 Expanded(
                   child: SingleChildScrollView(
                     child: Padding(
-                      padding: EdgeInsets.only(
-                        left: 15.w,
-                        right: 15.w,
-                        top: 25.h,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20.w,
+                        vertical: 24.h,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -111,8 +110,8 @@ class DettaglioContenitoreFrigoScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: 40.w,
-                    vertical: 30.h,
+                    horizontal: 20.w,
+                    vertical: 24.h,
                   ),
                   child: SizedBox(
                     width: double.maxFinite,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
@@ -23,7 +24,7 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () => _openSettings(context),
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.settings_outlined),
           ),
         ],
       ),
@@ -65,12 +66,32 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
       final contenitori = state.contenitori;
 
       if (contenitori.isEmpty) {
-        return Center(child: Text(appLoc.gen_No_Food));
+        return Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                Icons.kitchen_outlined,
+                size: 64.w,
+                color: Theme.of(context).colorScheme.outline,
+              ),
+              SizedBox(height: 16.h),
+              Text(
+                appLoc.gen_No_Food,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: Theme.of(context).colorScheme.onSurface
+                      .withValues(alpha: 0.6),
+                ),
+              ),
+            ],
+          ),
+        );
       }
 
       final theme = Theme.of(context);
 
       return ListView.builder(
+        padding: EdgeInsets.only(top: 8.h, bottom: 88.h),
         itemCount: contenitori.length,
         itemBuilder: (context, index) {
           final contenitore = contenitori[index];
@@ -78,16 +99,24 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
             key: Key('dismissible_${contenitore.id}'),
             direction: DismissDirection.horizontal,
             background: Container(
-              color: Theme.of(context).colorScheme.error,
+              margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
+              decoration: BoxDecoration(
+                color: theme.colorScheme.error,
+                borderRadius: BorderRadius.circular(16),
+              ),
               alignment: Alignment.centerLeft,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Icon(Icons.delete, color: theme.colorScheme.onError),
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Icon(Icons.delete_outline, color: theme.colorScheme.onError),
             ),
             secondaryBackground: Container(
-              color: theme.colorScheme.error,
+              margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
+              decoration: BoxDecoration(
+                color: theme.colorScheme.error,
+                borderRadius: BorderRadius.circular(16),
+              ),
               alignment: Alignment.centerRight,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Icon(Icons.delete, color: theme.colorScheme.onError),
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Icon(Icons.delete_outline, color: theme.colorScheme.onError),
             ),
             confirmDismiss: (direction) =>
                 _confirmDelete(context, contenitore.nome),
@@ -97,6 +126,7 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
               );
             },
             child: InkWell(
+              borderRadius: BorderRadius.circular(16),
               onTap: () => _editContenitore(context, contenitore.id),
               child: ContenitoreFrigoWidget(
                 dataInserimento: contenitore.dataCaricamento ?? DateTime.now(),
@@ -154,6 +184,9 @@ class ElencoContenitoriFrigoScreen extends StatelessWidget {
           ),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
+            style: TextButton.styleFrom(
+              foregroundColor: Theme.of(context).colorScheme.error,
+            ),
             child: Text(appLoc.gen_Delete),
           ),
         ],

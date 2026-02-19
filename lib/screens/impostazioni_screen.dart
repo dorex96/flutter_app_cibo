@@ -22,41 +22,65 @@ class ImpostazioniScreen extends StatelessWidget {
         children: [
           Expanded(
             child: ListView(
+              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
               children: [
-                // Button to toggle theme
-                ListTile(
-                  leading: const Icon(Icons.color_lens),
-                  title: Text(localizations.settings_theme),
-                  onTap: () => _toggleTheme(context),
-                  trailing: SizedBox(
-                    width: 80.w,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(currentThemeMode.name),
-                        SizedBox(width: 10.w),
-                        Icon(Icons.chevron_right, size: 24.w),
-                      ],
-                    ),
+                Card(
+                  child: Column(
+                    children: [
+                      ListTile(
+                        leading: Icon(
+                          Icons.palette_outlined,
+                          color: theme.colorScheme.primary,
+                        ),
+                        title: Text(localizations.settings_theme),
+                        onTap: () => _toggleTheme(context),
+                        trailing: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              currentThemeMode.name,
+                              style: theme.textTheme.bodySmall?.copyWith(
+                                color: theme.colorScheme.onSurface
+                                    .withValues(alpha: 0.6),
+                              ),
+                            ),
+                            SizedBox(width: 8.w),
+                            Icon(
+                              Icons.chevron_right,
+                              size: 24.w,
+                              color: theme.colorScheme.outline,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Divider(indent: 56.w),
+                      ListTile(
+                        leading: Icon(
+                          Icons.help_outline,
+                          color: theme.colorScheme.primary,
+                        ),
+                        title: Text(localizations.settings_help),
+                        onTap: () => _handleHelp(context),
+                        trailing: Icon(
+                          Icons.chevron_right,
+                          size: 24.w,
+                          color: theme.colorScheme.outline,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-
-                // Button to open Help
-                ListTile(
-                  leading: const Icon(Icons.help_outline),
-                  title: Text(localizations.settings_help),
-                  onTap: () => _handleHelp(context),
-                  trailing: Icon(Icons.chevron_right, size: 24.w),
                 ),
               ],
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 30.h),
+            padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 24.h),
             child: Center(
               child: Text(
                 'Copyright © 2026 Dorin Tverdohleb',
-                style: theme.textTheme.bodySmall,
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
+                ),
               ),
             ),
           ),
