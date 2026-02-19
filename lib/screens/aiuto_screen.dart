@@ -25,49 +25,61 @@ class AiutoScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(l10n.help_title)),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20.h),
+            SizedBox(height: 24.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: theme.dividerColor),
-                  ),
-                  height: 350.h,
-                  child: CustomImageWidget(
-                    themeMode: theme.brightness == Brightness.dark
-                        ? ThemeMode.dark
-                        : ThemeMode.light,
-                    imagePathLight: 'assets/Images/Screenshot_1_l.png',
-                    imagePathDark: 'assets/Images/Screenshot_1_d.png',
-                    fit: BoxFit.fill,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: theme.colorScheme.outline.withValues(alpha: 0.3),
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    height: 350.h,
+                    child: CustomImageWidget(
+                      themeMode: theme.brightness == Brightness.dark
+                          ? ThemeMode.dark
+                          : ThemeMode.light,
+                      imagePathLight: 'assets/Images/Screenshot_1_l.png',
+                      imagePathDark: 'assets/Images/Screenshot_1_d.png',
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: theme.dividerColor),
-                  ),
-                  height: 350.h,
-                  child: CustomImageWidget(
-                    themeMode: theme.brightness == Brightness.dark
-                        ? ThemeMode.dark
-                        : ThemeMode.light,
-                    imagePathLight: 'assets/Images/Screenshot_2_l.png',
-                    imagePathDark: 'assets/Images/Screenshot_2_d.png',
-                    fit: BoxFit.fill,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: theme.colorScheme.outline.withValues(alpha: 0.3),
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    height: 350.h,
+                    child: CustomImageWidget(
+                      themeMode: theme.brightness == Brightness.dark
+                          ? ThemeMode.dark
+                          : ThemeMode.light,
+                      imagePathLight: 'assets/Images/Screenshot_2_l.png',
+                      imagePathDark: 'assets/Images/Screenshot_2_d.png',
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 24.h),
+            SizedBox(height: 28.h),
             // Introduction
             Text(
               l10n.help_intro,
-              style: textStyle.copyWith(fontWeight: FontWeight.bold),
+              style: textStyle.copyWith(fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 16.h),
             // Step 1-2
@@ -150,7 +162,7 @@ class AiutoScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 24.h),
+            SizedBox(height: 28.h),
             // Thanks
             Center(
               child: Text(
