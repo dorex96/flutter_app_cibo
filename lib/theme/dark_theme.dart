@@ -105,4 +105,31 @@ final ThemeData darkTheme = ThemeData(
     behavior: SnackBarBehavior.floating,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
   ),
+  navigationBarTheme: NavigationBarThemeData(
+    backgroundColor: DarkColors.surface,
+    indicatorColor: DarkColors.primaryContainer,
+    labelTextStyle: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
+        return TextStyle(
+          color: DarkColors.primary,
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        );
+      }
+      return TextStyle(
+        color: DarkColors.onSurface.withValues(alpha: 0.6),
+        fontSize: 12,
+        fontWeight: FontWeight.w500,
+      );
+    }),
+    iconTheme: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
+        return IconThemeData(color: DarkColors.primary, size: 24);
+      }
+      return IconThemeData(
+        color: DarkColors.onSurface.withValues(alpha: 0.6),
+        size: 24,
+      );
+    }),
+  ),
 );

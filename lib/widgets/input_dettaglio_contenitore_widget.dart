@@ -11,11 +11,15 @@ class InputDettaglioContenitoreWidget extends StatefulWidget {
     required this.label,
     required this.controller,
     this.keyboardType = TextInputType.text,
+    this.suffixIcon,
   });
 
   final String label;
   final TextEditingController controller;
   final TextInputType keyboardType;
+
+  /// Optional icon widget displayed at the end of the text field.
+  final Widget? suffixIcon;
 
   @override
   State<InputDettaglioContenitoreWidget> createState() =>
@@ -45,6 +49,9 @@ class _InputDettaglioContenitoreWidgetState
             key: widget.key,
             controller: widget.controller,
             keyboardType: widget.keyboardType,
+            decoration: widget.suffixIcon != null
+                ? InputDecoration(suffixIcon: widget.suffixIcon)
+                : null,
           ),
         ],
       ),

@@ -15,6 +15,7 @@ import 'package:objectbox/objectbox.dart' as obx;
 import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
 
 import '../models/entities/contenitore_entity.dart';
+import '../models/entities/set_contenitori_entity.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 
@@ -71,6 +72,40 @@ final _entities = <obx_int.ModelEntity>[
     relations: <obx_int.ModelRelation>[],
     backlinks: <obx_int.ModelBacklink>[],
   ),
+  obx_int.ModelEntity(
+    id: const obx_int.IdUid(2, 3791765575889175519),
+    name: 'SetContenitoriEntity',
+    lastPropertyId: const obx_int.IdUid(4, 3054807193526174324),
+    flags: 0,
+    properties: <obx_int.ModelProperty>[
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(1, 8019173404913902491),
+        name: 'id',
+        type: 6,
+        flags: 1,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(2, 6602960333717577717),
+        name: 'nome',
+        type: 9,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(3, 8108718995571389189),
+        name: 'pathImmagine',
+        type: 9,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(4, 3054807193526174324),
+        name: 'pesoInGrammi',
+        type: 8,
+        flags: 0,
+      ),
+    ],
+    relations: <obx_int.ModelRelation>[],
+    backlinks: <obx_int.ModelBacklink>[],
+  ),
 ];
 
 /// Shortcut for [obx.Store.new] that passes [getObjectBoxModel] and for Flutter
@@ -116,7 +151,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
     // Typically, this is done with `dart run build_runner build`.
     generatorVersion: obx_int.GeneratorVersion.v2025_12_16,
     entities: _entities,
-    lastEntityId: const obx_int.IdUid(1, 5360143009456191875),
+    lastEntityId: const obx_int.IdUid(2, 3791765575889175519),
     lastIndexId: const obx_int.IdUid(0, 0),
     lastRelationId: const obx_int.IdUid(0, 0),
     lastSequenceId: const obx_int.IdUid(0, 0),
@@ -193,6 +228,56 @@ obx_int.ModelDefinition getObjectBoxModel() {
         return object;
       },
     ),
+    SetContenitoriEntity: obx_int.EntityDefinition<SetContenitoriEntity>(
+      model: _entities[1],
+      toOneRelations: (SetContenitoriEntity object) => [],
+      toManyRelations: (SetContenitoriEntity object) => {},
+      getId: (SetContenitoriEntity object) => object.id,
+      setId: (SetContenitoriEntity object, int id) {
+        object.id = id;
+      },
+      objectToFB: (SetContenitoriEntity object, fb.Builder fbb) {
+        final nomeOffset = fbb.writeString(object.nome);
+        final pathImmagineOffset = fbb.writeString(object.pathImmagine);
+        fbb.startTable(5);
+        fbb.addInt64(0, object.id);
+        fbb.addOffset(1, nomeOffset);
+        fbb.addOffset(2, pathImmagineOffset);
+        fbb.addFloat64(3, object.pesoInGrammi);
+        fbb.finish(fbb.endTable());
+        return object.id;
+      },
+      objectFromFB: (obx.Store store, ByteData fbData) {
+        final buffer = fb.BufferContext(fbData);
+        final rootOffset = buffer.derefObject(0);
+        final idParam = const fb.Int64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          4,
+          0,
+        );
+        final nomeParam = const fb.StringReader(
+          asciiOptimization: true,
+        ).vTableGet(buffer, rootOffset, 6, '');
+        final pathImmagineParam = const fb.StringReader(
+          asciiOptimization: true,
+        ).vTableGet(buffer, rootOffset, 8, '');
+        final pesoInGrammiParam = const fb.Float64Reader().vTableGet(
+          buffer,
+          rootOffset,
+          10,
+          0,
+        );
+        final object = SetContenitoriEntity(
+          id: idParam,
+          nome: nomeParam,
+          pathImmagine: pathImmagineParam,
+          pesoInGrammi: pesoInGrammiParam,
+        );
+
+        return object;
+      },
+    ),
   };
 
   return obx_int.ModelDefinition(model, bindings);
@@ -233,5 +318,28 @@ class ContenitoreEntity_ {
   /// See [ContenitoreEntity.dataCaricamento].
   static final dataCaricamento = obx.QueryDateProperty<ContenitoreEntity>(
     _entities[0].properties[6],
+  );
+}
+
+/// [SetContenitoriEntity] entity fields to define ObjectBox queries.
+class SetContenitoriEntity_ {
+  /// See [SetContenitoriEntity.id].
+  static final id = obx.QueryIntegerProperty<SetContenitoriEntity>(
+    _entities[1].properties[0],
+  );
+
+  /// See [SetContenitoriEntity.nome].
+  static final nome = obx.QueryStringProperty<SetContenitoriEntity>(
+    _entities[1].properties[1],
+  );
+
+  /// See [SetContenitoriEntity.pathImmagine].
+  static final pathImmagine = obx.QueryStringProperty<SetContenitoriEntity>(
+    _entities[1].properties[2],
+  );
+
+  /// See [SetContenitoriEntity.pesoInGrammi].
+  static final pesoInGrammi = obx.QueryDoubleProperty<SetContenitoriEntity>(
+    _entities[1].properties[3],
   );
 }

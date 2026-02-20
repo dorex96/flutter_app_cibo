@@ -147,4 +147,55 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get help_thanks => 'Thank you for downloading Cibo.';
+
+  @override
+  String get navTabFridge => 'Fridge';
+
+  @override
+  String get navTabContainers => 'Containers';
+
+  @override
+  String get navTabSettings => 'Settings';
+
+  @override
+  String get containerSetsPageTitle => 'Container Sets';
+
+  @override
+  String get containerSetsEmpty => 'No container sets saved yet';
+
+  @override
+  String get containerSetsAddTitle => 'Add Container Set';
+
+  @override
+  String get containerSetsNameLabel => 'Name';
+
+  @override
+  String get containerSetsWeightLabel => 'Weight (g)';
+
+  @override
+  String get containerSetsImageLabel => 'Image';
+
+  @override
+  String get containerSetsSaveButton => 'Save';
+
+  @override
+  String get containerSetsImageCamera => 'Camera';
+
+  @override
+  String get containerSetsImageGallery => 'Gallery';
+
+  @override
+  String get containerSetsImageChoose => 'Choose Image Source';
+
+  @override
+  String containerSetsWeight(String weight) {
+    return 'Weight: $weight g';
+  }
+
+  @override
+  String get presetPickerTitle => 'Select a Container';
+
+  @override
+  String get presetPickerEmpty =>
+      'No container presets saved yet.\nAdd them from the Containers tab.';
 }

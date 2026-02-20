@@ -147,4 +147,55 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get help_thanks => 'Grazie per aver scaricato Cibo.';
+
+  @override
+  String get navTabFridge => 'Frigo';
+
+  @override
+  String get navTabContainers => 'Contenitori';
+
+  @override
+  String get navTabSettings => 'Impostazioni';
+
+  @override
+  String get containerSetsPageTitle => 'Set Contenitori';
+
+  @override
+  String get containerSetsEmpty => 'Nessun set di contenitori salvato';
+
+  @override
+  String get containerSetsAddTitle => 'Aggiungi Set Contenitore';
+
+  @override
+  String get containerSetsNameLabel => 'Nome';
+
+  @override
+  String get containerSetsWeightLabel => 'Peso (g)';
+
+  @override
+  String get containerSetsImageLabel => 'Immagine';
+
+  @override
+  String get containerSetsSaveButton => 'Salva';
+
+  @override
+  String get containerSetsImageCamera => 'Fotocamera';
+
+  @override
+  String get containerSetsImageGallery => 'Galleria';
+
+  @override
+  String get containerSetsImageChoose => 'Scegli Origine Immagine';
+
+  @override
+  String containerSetsWeight(String weight) {
+    return 'Peso: $weight g';
+  }
+
+  @override
+  String get presetPickerTitle => 'Seleziona un Contenitore';
+
+  @override
+  String get presetPickerEmpty =>
+      'Nessun contenitore preimpostato.\nAggiungili dalla scheda Contenitori.';
 }

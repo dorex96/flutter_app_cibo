@@ -46,9 +46,38 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "2:3791765575889175519",
+      "lastPropertyId": "4:3054807193526174324",
+      "name": "SetContenitoriEntity",
+      "properties": [
+        {
+          "id": "1:8019173404913902491",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6602960333717577717",
+          "name": "nome",
+          "type": 9
+        },
+        {
+          "id": "3:8108718995571389189",
+          "name": "pathImmagine",
+          "type": 9
+        },
+        {
+          "id": "4:3054807193526174324",
+          "name": "pesoInGrammi",
+          "type": 8
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "1:5360143009456191875",
+  "lastEntityId": "2:3791765575889175519",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",

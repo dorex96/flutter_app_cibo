@@ -351,6 +351,102 @@ abstract class AppLocalizations {
   /// In it, this message translates to:
   /// **'Grazie per aver scaricato Cibo.'**
   String get help_thanks;
+
+  /// Label for the Fridge tab in the bottom navigation bar
+  ///
+  /// In it, this message translates to:
+  /// **'Frigo'**
+  String get navTabFridge;
+
+  /// Label for the Containers tab in the bottom navigation bar
+  ///
+  /// In it, this message translates to:
+  /// **'Contenitori'**
+  String get navTabContainers;
+
+  /// Label for the Settings tab in the bottom navigation bar
+  ///
+  /// In it, this message translates to:
+  /// **'Impostazioni'**
+  String get navTabSettings;
+
+  /// Title for the container sets list page
+  ///
+  /// In it, this message translates to:
+  /// **'Set Contenitori'**
+  String get containerSetsPageTitle;
+
+  /// Message displayed when there are no saved container sets
+  ///
+  /// In it, this message translates to:
+  /// **'Nessun set di contenitori salvato'**
+  String get containerSetsEmpty;
+
+  /// Title for the add container set form
+  ///
+  /// In it, this message translates to:
+  /// **'Aggiungi Set Contenitore'**
+  String get containerSetsAddTitle;
+
+  /// Label for the container set name field
+  ///
+  /// In it, this message translates to:
+  /// **'Nome'**
+  String get containerSetsNameLabel;
+
+  /// Label for the container set weight field
+  ///
+  /// In it, this message translates to:
+  /// **'Peso (g)'**
+  String get containerSetsWeightLabel;
+
+  /// Label for the container set image field
+  ///
+  /// In it, this message translates to:
+  /// **'Immagine'**
+  String get containerSetsImageLabel;
+
+  /// Label for the save button in the add container set form
+  ///
+  /// In it, this message translates to:
+  /// **'Salva'**
+  String get containerSetsSaveButton;
+
+  /// Label for the camera option in the image source picker
+  ///
+  /// In it, this message translates to:
+  /// **'Fotocamera'**
+  String get containerSetsImageCamera;
+
+  /// Label for the gallery option in the image source picker
+  ///
+  /// In it, this message translates to:
+  /// **'Galleria'**
+  String get containerSetsImageGallery;
+
+  /// Title for the image source selection dialog
+  ///
+  /// In it, this message translates to:
+  /// **'Scegli Origine Immagine'**
+  String get containerSetsImageChoose;
+
+  /// Label showing the container set weight
+  ///
+  /// In it, this message translates to:
+  /// **'Peso: {weight} g'**
+  String containerSetsWeight(String weight);
+
+  /// Title for the container preset picker dialog
+  ///
+  /// In it, this message translates to:
+  /// **'Seleziona un Contenitore'**
+  String get presetPickerTitle;
+
+  /// Message when no presets are available in the picker
+  ///
+  /// In it, this message translates to:
+  /// **'Nessun contenitore preimpostato.\nAggiungili dalla scheda Contenitori.'**
+  String get presetPickerEmpty;
 }
 
 class _AppLocalizationsDelegate

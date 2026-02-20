@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../cubit/dettaglio_contenitore_cubit/dettaglio_contenitore_cubit.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/input_dettaglio_contenitore_widget.dart';
+import '../widgets/seleziona_set_contenitore_bottom_sheet.dart';
 
 /// A screen that displays the details of a refrigerator container.
 ///
@@ -78,6 +79,15 @@ class DettaglioContenitoreFrigoScreen extends StatelessWidget {
                             label: appLoc.containerDetailContainerWeightLabel,
                             controller: cubit.containerWeightController,
                             keyboardType: TextInputType.number,
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                Icons.inventory_2_outlined,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                              tooltip: appLoc.presetPickerTitle,
+                              onPressed: () =>
+                                  _openPresetPicker(context, cubit),
+                            ),
                           ),
                           InputDettaglioContenitoreWidget(
                             key: Key('totalweight_$idContenitore'),
@@ -124,6 +134,30 @@ class DettaglioContenitoreFrigoScreen extends StatelessWidget {
               ],
             ),
           );
+        },
+      ),
+    );
+  }
+
+  /// Opens a bottom sheet to pick a saved container preset.
+  ///
+  /// When a preset is selected, the container weight field is populated
+  /// with the preset's tare weight.
+  void _openPresetPicker(
+    BuildContext context,
+    DettaglioContenitoreCubit cubit,
+  ) {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (_) => SelezionaSetContenitoreBottomSheet(
+        onSelected: (preset) {
+          cubit.containerWeightController.text =
+              preset.pesoInGrammi == preset.pesoInGrammi.roundToDouble()
+              ? preset.pesoInGrammi.round().toString()
+              : preset.pesoInGrammi.toStringAsFixed(2);
         },
       ),
     );
