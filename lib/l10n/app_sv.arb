@@ -187,5 +187,74 @@
     "help_thanks": "Tack för att du laddade ner Cibo.",
     "@help_thanks": {
         "description": "Thank you message"
+    },
+    "navTabFridge": "Kylskåp",
+    "@navTabFridge": {
+        "description": "Label for the Fridge tab in the bottom navigation bar"
+    },
+    "navTabContainers": "Behållare",
+    "@navTabContainers": {
+        "description": "Label for the Containers tab in the bottom navigation bar"
+    },
+    "navTabSettings": "Inställningar",
+    "@navTabSettings": {
+        "description": "Label for the Settings tab in the bottom navigation bar"
+    },
+    "containerSetsPageTitle": "Behållar-set",
+    "@containerSetsPageTitle": {
+        "description": "Title for the container sets list page"
+    },
+    "containerSetsEmpty": "Inga behållar-set sparade ännu",
+    "@containerSetsEmpty": {
+        "description": "Message displayed when there are no saved container sets"
+    },
+    "containerSetsAddTitle": "Lägg till behållar-set",
+    "@containerSetsAddTitle": {
+        "description": "Title for the add container set form"
+    },
+    "containerSetsNameLabel": "Namn",
+    "@containerSetsNameLabel": {
+        "description": "Label for the container set name field"
+    },
+    "containerSetsWeightLabel": "Vikt (g)",
+    "@containerSetsWeightLabel": {
+        "description": "Label for the container set weight field"
+    },
+    "containerSetsImageLabel": "Bild",
+    "@containerSetsImageLabel": {
+        "description": "Label for the container set image field"
+    },
+    "containerSetsSaveButton": "Spara",
+    "@containerSetsSaveButton": {
+        "description": "Label for the save button in the add container set form"
+    },
+    "containerSetsImageCamera": "Kamera",
+    "@containerSetsImageCamera": {
+        "description": "Label for the camera option in the image source picker"
+    },
+    "containerSetsImageGallery": "Galleri",
+    "@containerSetsImageGallery": {
+        "description": "Label for the gallery option in the image source picker"
+    },
+    "containerSetsImageChoose": "Välj bildkälla",
+    "@containerSetsImageChoose": {
+        "description": "Title for the image source selection dialog"
+    },
+    "containerSetsWeight": "Vikt: {weight} g",
+    "@containerSetsWeight": {
+        "description": "Label showing the container set weight",
+        "placeholders": {
+            "weight": {
+                "type": "String"
+            }
+        }
+    },
+    "presetPickerTitle": "Välj en behållare",
+    "@presetPickerTitle": {
+        "description": "Title for the container preset picker dialog"
+    },
+    "presetPickerEmpty": "Inga förinställda behållare sparade.\nLägg till dem från fliken Behållare.",
+    "@presetPickerEmpty": {
+        "description": "Message when no presets are available in the picker"
     }
 }

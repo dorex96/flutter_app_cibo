@@ -144,4 +144,55 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get help_thanks => 'Tack för att du laddade ner Cibo.';
+
+  @override
+  String get navTabFridge => 'Kylskåp';
+
+  @override
+  String get navTabContainers => 'Behållare';
+
+  @override
+  String get navTabSettings => 'Inställningar';
+
+  @override
+  String get containerSetsPageTitle => 'Behållar-set';
+
+  @override
+  String get containerSetsEmpty => 'Inga behållar-set sparade ännu';
+
+  @override
+  String get containerSetsAddTitle => 'Lägg till behållar-set';
+
+  @override
+  String get containerSetsNameLabel => 'Namn';
+
+  @override
+  String get containerSetsWeightLabel => 'Vikt (g)';
+
+  @override
+  String get containerSetsImageLabel => 'Bild';
+
+  @override
+  String get containerSetsSaveButton => 'Spara';
+
+  @override
+  String get containerSetsImageCamera => 'Kamera';
+
+  @override
+  String get containerSetsImageGallery => 'Galleri';
+
+  @override
+  String get containerSetsImageChoose => 'Välj bildkälla';
+
+  @override
+  String containerSetsWeight(String weight) {
+    return 'Vikt: $weight g';
+  }
+
+  @override
+  String get presetPickerTitle => 'Välj en behållare';
+
+  @override
+  String get presetPickerEmpty =>
+      'Inga förinställda behållare sparade.\nLägg till dem från fliken Behållare.';
 }

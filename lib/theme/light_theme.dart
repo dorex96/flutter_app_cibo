@@ -55,15 +55,15 @@ final ThemeData lightTheme = ThemeData(
   ),
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
-    fillColor: LightColors.surfaceContainerHighest,
+    fillColor: LightColors.surface,
     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
-      borderSide: BorderSide.none,
+      borderSide: BorderSide(color: LightColors.outline.withValues(alpha: 0.5)),
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
-      borderSide: BorderSide.none,
+      borderSide: BorderSide(color: LightColors.outline.withValues(alpha: 0.5)),
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
@@ -104,5 +104,32 @@ final ThemeData lightTheme = ThemeData(
   snackBarTheme: SnackBarThemeData(
     behavior: SnackBarBehavior.floating,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+  ),
+  navigationBarTheme: NavigationBarThemeData(
+    backgroundColor: LightColors.surface,
+    indicatorColor: LightColors.primaryContainer,
+    labelTextStyle: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
+        return TextStyle(
+          color: LightColors.primary,
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+        );
+      }
+      return TextStyle(
+        color: LightColors.onSurface.withValues(alpha: 0.6),
+        fontSize: 12,
+        fontWeight: FontWeight.w500,
+      );
+    }),
+    iconTheme: WidgetStateProperty.resolveWith((states) {
+      if (states.contains(WidgetState.selected)) {
+        return IconThemeData(color: LightColors.primary, size: 24);
+      }
+      return IconThemeData(
+        color: LightColors.onSurface.withValues(alpha: 0.6),
+        size: 24,
+      );
+    }),
   ),
 );

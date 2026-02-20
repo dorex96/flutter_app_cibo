@@ -148,4 +148,55 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get help_thanks => 'Gracias por descargar Cibo.';
+
+  @override
+  String get navTabFridge => 'Nevera';
+
+  @override
+  String get navTabContainers => 'Contenedores';
+
+  @override
+  String get navTabSettings => 'Ajustes';
+
+  @override
+  String get containerSetsPageTitle => 'Sets de Contenedores';
+
+  @override
+  String get containerSetsEmpty => 'No hay sets de contenedores guardados';
+
+  @override
+  String get containerSetsAddTitle => 'Añadir Set de Contenedor';
+
+  @override
+  String get containerSetsNameLabel => 'Nombre';
+
+  @override
+  String get containerSetsWeightLabel => 'Peso (g)';
+
+  @override
+  String get containerSetsImageLabel => 'Imagen';
+
+  @override
+  String get containerSetsSaveButton => 'Guardar';
+
+  @override
+  String get containerSetsImageCamera => 'Cámara';
+
+  @override
+  String get containerSetsImageGallery => 'Galería';
+
+  @override
+  String get containerSetsImageChoose => 'Elegir Fuente de Imagen';
+
+  @override
+  String containerSetsWeight(String weight) {
+    return 'Peso: $weight g';
+  }
+
+  @override
+  String get presetPickerTitle => 'Seleccionar un Contenedor';
+
+  @override
+  String get presetPickerEmpty =>
+      'No hay contenedores preestablecidos.\nAñádelos desde la pestaña Contenedores.';
 }

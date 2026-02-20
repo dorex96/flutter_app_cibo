@@ -1,5 +1,7 @@
 PODS:
   - Flutter (1.0.0)
+  - image_picker_ios (0.0.1):
+    - Flutter
   - ObjectBox (5.1.1)
   - objectbox_flutter_libs (0.0.1):
     - Flutter
@@ -13,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - objectbox_flutter_libs (from `.symlinks/plugins/objectbox_flutter_libs/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
@@ -24,6 +27,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  image_picker_ios:
+    :path: ".symlinks/plugins/image_picker_ios/ios"
   objectbox_flutter_libs:
     :path: ".symlinks/plugins/objectbox_flutter_libs/ios"
   path_provider_foundation:
@@ -33,6 +38,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  image_picker_ios: 4f2f91b01abdb52842a8e277617df877e40f905b
   ObjectBox: 26871f7cce80a8bd2e610bf944aeaded730f6925
   objectbox_flutter_libs: 7d74f519c4385e7404f8a024074f7175f00a4945
   path_provider_foundation: 0b743cbb62d8e47eab856f09262bb8c1ddcfe6ba

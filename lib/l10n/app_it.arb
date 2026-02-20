@@ -187,5 +187,74 @@
     "help_thanks": "Grazie per aver scaricato Cibo.",
     "@help_thanks": {
         "description": "Thank you message"
+    },
+    "navTabFridge": "Frigo",
+    "@navTabFridge": {
+        "description": "Label for the Fridge tab in the bottom navigation bar"
+    },
+    "navTabContainers": "Contenitori",
+    "@navTabContainers": {
+        "description": "Label for the Containers tab in the bottom navigation bar"
+    },
+    "navTabSettings": "Impostazioni",
+    "@navTabSettings": {
+        "description": "Label for the Settings tab in the bottom navigation bar"
+    },
+    "containerSetsPageTitle": "Set Contenitori",
+    "@containerSetsPageTitle": {
+        "description": "Title for the container sets list page"
+    },
+    "containerSetsEmpty": "Nessun set di contenitori salvato",
+    "@containerSetsEmpty": {
+        "description": "Message displayed when there are no saved container sets"
+    },
+    "containerSetsAddTitle": "Aggiungi Set Contenitore",
+    "@containerSetsAddTitle": {
+        "description": "Title for the add container set form"
+    },
+    "containerSetsNameLabel": "Nome",
+    "@containerSetsNameLabel": {
+        "description": "Label for the container set name field"
+    },
+    "containerSetsWeightLabel": "Peso (g)",
+    "@containerSetsWeightLabel": {
+        "description": "Label for the container set weight field"
+    },
+    "containerSetsImageLabel": "Immagine",
+    "@containerSetsImageLabel": {
+        "description": "Label for the container set image field"
+    },
+    "containerSetsSaveButton": "Salva",
+    "@containerSetsSaveButton": {
+        "description": "Label for the save button in the add container set form"
+    },
+    "containerSetsImageCamera": "Fotocamera",
+    "@containerSetsImageCamera": {
+        "description": "Label for the camera option in the image source picker"
+    },
+    "containerSetsImageGallery": "Galleria",
+    "@containerSetsImageGallery": {
+        "description": "Label for the gallery option in the image source picker"
+    },
+    "containerSetsImageChoose": "Scegli Origine Immagine",
+    "@containerSetsImageChoose": {
+        "description": "Title for the image source selection dialog"
+    },
+    "containerSetsWeight": "Peso: {weight} g",
+    "@containerSetsWeight": {
+        "description": "Label showing the container set weight",
+        "placeholders": {
+            "weight": {
+                "type": "String"
+            }
+        }
+    },
+    "presetPickerTitle": "Seleziona un Contenitore",
+    "@presetPickerTitle": {
+        "description": "Title for the container preset picker dialog"
+    },
+    "presetPickerEmpty": "Nessun contenitore preimpostato.\nAggiungili dalla scheda Contenitori.",
+    "@presetPickerEmpty": {
+        "description": "Message when no presets are available in the picker"
     }
 }

@@ -150,4 +150,55 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get help_thanks => 'Danke, dass du Cibo heruntergeladen hast.';
+
+  @override
+  String get navTabFridge => 'Kühlschrank';
+
+  @override
+  String get navTabContainers => 'Behälter';
+
+  @override
+  String get navTabSettings => 'Einstellungen';
+
+  @override
+  String get containerSetsPageTitle => 'Behälter-Sets';
+
+  @override
+  String get containerSetsEmpty => 'Noch keine Behälter-Sets gespeichert';
+
+  @override
+  String get containerSetsAddTitle => 'Behälter-Set hinzufügen';
+
+  @override
+  String get containerSetsNameLabel => 'Name';
+
+  @override
+  String get containerSetsWeightLabel => 'Gewicht (g)';
+
+  @override
+  String get containerSetsImageLabel => 'Bild';
+
+  @override
+  String get containerSetsSaveButton => 'Speichern';
+
+  @override
+  String get containerSetsImageCamera => 'Kamera';
+
+  @override
+  String get containerSetsImageGallery => 'Galerie';
+
+  @override
+  String get containerSetsImageChoose => 'Bildquelle wählen';
+
+  @override
+  String containerSetsWeight(String weight) {
+    return 'Gewicht: $weight g';
+  }
+
+  @override
+  String get presetPickerTitle => 'Behälter auswählen';
+
+  @override
+  String get presetPickerEmpty =>
+      'Noch keine Behälter-Vorlagen gespeichert.\nFüge sie über den Behälter-Tab hinzu.';
 }
