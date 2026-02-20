@@ -49,9 +49,7 @@ class _InputDettaglioContenitoreWidgetState
             key: widget.key,
             controller: widget.controller,
             keyboardType: widget.keyboardType,
-            decoration: widget.suffixIcon != null
-                ? InputDecoration(suffixIcon: widget.suffixIcon)
-                : null,
+            decoration: InputDecoration(suffixIcon: widget.suffixIcon),
           ),
         ],
       ),
